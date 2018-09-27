@@ -1,0 +1,23 @@
+立即体验=com.yealink.uc.android:id/btn_begin
+用户名=com.yealink.uc.android:id/edit
+密码=com.yealink.uc.android:id/et_psw
+登录按钮=com.yealink.uc.android:id/btn_login
+服务器=com.yealink.uc.android:id/et_server
+记住密码=com.yealink.uc.android:id/ckb_remember_psw
+
+
+登录页面 com.yealink.uc.android.login.LoginActivity
+欢迎页面 com.yealink.uc.android.login.WelcomeActivity
+Enabled
+登录失败=com.yealink.uc.android:id/title
+1.连接服务器失败，请检查网络或者服务器地址！
+2.用户名或密码错误
+3.没有找到对应的账号
+4.用户名或密码错误,请重新输入
+
+
+
+失败内容=com.yealink.uc.android:id/message
+确定按钮=com.yealink.uc.android:id/positiveButton
+
+
