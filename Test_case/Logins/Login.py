@@ -53,7 +53,7 @@ class Login(unittest.TestCase):
         ckb_remember_psw=self.config_factory.find_element_id(self.driver,Const.REMENBERPASSWORD).get_attribute("checked")
 
         #忘记密码
-        forgetpassword=self.config_factory.find_element_id(self.driver,Const.FORGETPASSWORD).text
+        # forgetpassword=self.config_factory.find_element_id(self.driver,Const.FORGETPASSWORD).text
         #意见反馈
         feedback=self.config_factory.find_element_id(self.driver,Const.FEEDBACK).text
         #校验默认值
@@ -61,60 +61,60 @@ class Login(unittest.TestCase):
         self.assertEqual(password,"",msg="密码默认值不对")
         self.assertEqual(server,"ume.yealink.com",msg="服务器默认值不对")
         self.assertTrue(ckb_remember_psw, msg="默认选中状态不对")
-        self.assertEqual(forgetpassword,"忘记密码",msg="忘记密码文案错误")
+        # self.assertEqual(forgetpassword,"忘记密码",msg="忘记密码文案错误")
         self.assertEqual(feedback,"意见反馈",msg="意见反馈文案错误")
-        self.assertTrue(self.config_factory.find_element_id(self.driver,Const.FORGETPASSWORD).get_attribute("Clickable"),"忘记密码不能点击")
+        # self.assertTrue(self.config_factory.find_element_id(self.driver,Const.FORGETPASSWORD).get_attribute("Clickable"),"忘记密码不能点击")
         self.assertTrue(self.config_factory.find_element_id(self.driver,Const.FEEDBACK).get_attribute("Clickable"),"意见反馈不能点击")
 
-    def test_login_errorhost(self):
-        '''
-            异常用例：输入错误的服务器地址
-            检查点：错误提示是否正确
-        '''
-        #输入数据进行登录操作
-        self.config_factory.login(self.driver,self.config_factory.login_errorhost["username"],self.config_factory.login_errorhost["password"],self.config_factory.login_errorhost["server"])
-        #校验提示
-        self.config_factory.asserttips(self.driver,self.config_factory.login_errorhost["title"],self.config_factory.login_errorhost["message"])
+    # def test_login_errorhost(self):
+    #     '''
+    #         异常用例：输入错误的服务器地址
+    #         检查点：错误提示是否正确
+    #     '''
+    #     #输入数据进行登录操作
+    #     self.config_factory.login(self.driver,self.config_factory.login_errorhost["username"],self.config_factory.login_errorhost["password"],self.config_factory.login_errorhost["server"])
+    #     #校验提示
+    #     self.config_factory.asserttips(self.driver,self.config_factory.login_errorhost["title"],self.config_factory.login_errorhost["message"])
+    #
+    # def test_login_errorusername(self):
+    #     '''
+    #         异常用例：输入错误的用户名
+    #         检查点：错误提示是否正确
+    #     '''
+    #     # 输入数据进行登录操作
+    #     self.config_factory.login(self.driver, self.config_factory.login_errorusername["username"],self.config_factory.login_errorusername["password"],self.config_factory.login_errorusername["server"])
+    #     # 校验提示
+    #     self.config_factory.asserttips(self.driver, self.config_factory.login_errorusername["title"],self.config_factory.login_errorusername["message"])
+    #
+    # def test_login_notexistusername(self):
+    #     '''
+    #         异常用例：输入不存在的用户名
+    #         检查点：错误提示是否正确
+    #     '''
+    #     # 输入数据进行登录操作
+    #     self.config_factory.login(self.driver, self.config_factory.login_notexistusername["username"],self.config_factory.login_notexistusername["password"],self.config_factory.login_notexistusername["server"])
+    #     # 校验提示
+    #     self.config_factory.asserttips(self.driver, self.config_factory.login_notexistusername["title"],self.config_factory.login_notexistusername["message"])
+    #
+    # def test_login_errorpassword(self):
+    #     '''
+    #         异常用例：输入错误的密码
+    #         检查点：错误提示是否正确
+    #     '''
+    #     # 输入数据进行登录操作
+    #     self.config_factory.login(self.driver, self.config_factory.login_errorpassword["username"],self.config_factory.login_errorpassword["password"],self.config_factory.login_errorpassword["server"])
+    #     # 校验提示
+    #     self.config_factory.asserttips(self.driver, self.config_factory.login_errorpassword["title"],self.config_factory.login_errorpassword["message"])
 
-    def test_login_errorusername(self):
-        '''
-            异常用例：输入错误的用户名
-            检查点：错误提示是否正确
-        '''
-        # 输入数据进行登录操作
-        self.config_factory.login(self.driver, self.config_factory.login_errorusername["username"],self.config_factory.login_errorusername["password"],self.config_factory.login_errorusername["server"])
-        # 校验提示
-        self.config_factory.asserttips(self.driver, self.config_factory.login_errorusername["title"],self.config_factory.login_errorusername["message"])
-
-    def test_login_notexistusername(self):
-        '''
-            异常用例：输入不存在的用户名
-            检查点：错误提示是否正确
-        '''
-        # 输入数据进行登录操作
-        self.config_factory.login(self.driver, self.config_factory.login_notexistusername["username"],self.config_factory.login_notexistusername["password"],self.config_factory.login_notexistusername["server"])
-        # 校验提示
-        self.config_factory.asserttips(self.driver, self.config_factory.login_notexistusername["title"],self.config_factory.login_notexistusername["message"])
-
-    def test_login_errorpassword(self):
-        '''
-            异常用例：输入错误的密码
-            检查点：错误提示是否正确
-        '''
-        # 输入数据进行登录操作
-        self.config_factory.login(self.driver, self.config_factory.login_errorpassword["username"],self.config_factory.login_errorpassword["password"],self.config_factory.login_errorpassword["server"])
-        # 校验提示
-        self.config_factory.asserttips(self.driver, self.config_factory.login_errorpassword["title"],self.config_factory.login_errorpassword["message"])
-
-    def test_login_nullhost(self):
-        '''
-            异常用例：服务器地址为空
-            检查点：错误提示是否正确
-        '''
-        # 输入数据进行登录操作
-        self.config_factory.login(self.driver, self.config_factory.login_nullhost["username"],self.config_factory.login_nullhost["password"],self.config_factory.login_nullhost["server"])
-        # 校验提示
-        self.config_factory.asserttips(self.driver, self.config_factory.login_nullhost["title"],self.config_factory.login_nullhost["message"])
+    # def test_login_nullhost(self):
+    #     '''
+    #         异常用例：服务器地址为空
+    #         检查点：错误提示是否正确
+    #     '''
+    #     # 输入数据进行登录操作
+    #     self.config_factory.login(self.driver, self.config_factory.login_nullhost["username"],self.config_factory.login_nullhost["password"],self.config_factory.login_nullhost["server"])
+    #     # 校验提示
+    #     self.config_factory.asserttips(self.driver, self.config_factory.login_nullhost["title"],self.config_factory.login_nullhost["message"])
 
     def test_login_zq(self):
         '''
