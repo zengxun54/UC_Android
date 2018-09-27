@@ -26,7 +26,7 @@ class AudioCall (unittest.TestCase):
         print('test_audiocall')
         debug_id_pre = commonClass.debug_id_pre
         conf = configparser.ConfigParser ()
-        conf.read("../config/parameters.ini", encoding='utf-8')
+        conf.read("../../config/parameters.ini", encoding='utf-8')
         # username='测试1'
         # username='测试1'
         username=conf.get ("单人聊天", "单人聊天用户")

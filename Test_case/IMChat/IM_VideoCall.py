@@ -27,7 +27,7 @@ class VideoCall (unittest.TestCase):
     def test_audiocall(self):
         time.sleep(3)
         conf = configparser.ConfigParser ()
-        conf.read ("../config/parameters.ini", encoding='utf-8')
+        conf.read ("../../config/parameters.ini", encoding='utf-8')
         username=conf.get ("单人聊天", "单人聊天用户")
         self.driver.find_element_by_name(username).click()#进入和某人的IM聊天界面
         time.sleep (5)

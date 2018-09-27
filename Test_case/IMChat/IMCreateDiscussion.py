@@ -21,7 +21,7 @@ class CreateDiscussion (unittest.TestCase):
     def  test_creatediscussion(self):
         time.sleep (5)
         conf = configparser.ConfigParser ()
-        conf.read ("../config/parameters.ini", encoding='utf-8')
+        conf.read ("../../config/parameters.ini", encoding='utf-8')
         abc='tj'
         print('click 1')
         # self.driver.find_element_by_id('action_search').click()  # 进入和某人的IM聊天界面
