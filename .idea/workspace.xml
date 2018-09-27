@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a7fe29f-94d7-403f-a866-938d73a3f1db" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Log/Demo.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Log/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Demo.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Report/Demo.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Report/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Test_case/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/Demo.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Test_case/Logout/Logout.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Test_case/Logout/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/Demo.py" afterPath="$PROJECT_DIR$/config/Demo.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Test_case/Demo.py" afterPath="$PROJECT_DIR$/Run_Alltest.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,48 +20,20 @@
       <file leaf-file-name="Demo.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/Demo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="27">
+              <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+              <folding>
+                <element signature="e#178#800#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Demo.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Log/Demo.py">
+      <file leaf-file-name="Logout.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Test_case/Logout/Logout.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Demo.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Public/Demo.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Demo.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Report/Demo.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Demo.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Test_case/Demo.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="228">
+              <caret line="26" column="23" lean-forward="true" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -87,6 +54,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/Run_Alltest.py" />
+        <option value="$PROJECT_DIR$/Test_case/Logout/Logout.py" />
         <option value="$PROJECT_DIR$/config/Demo.py" />
       </list>
     </option>
@@ -131,27 +100,13 @@
             <path>
               <item name="UC_Android" type="b2602c69:ProjectViewProjectNode" />
               <item name="UC_Android" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UC_Android" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UC_Android" type="462c0819:PsiDirectoryNode" />
-              <item name="Log" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UC_Android" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UC_Android" type="462c0819:PsiDirectoryNode" />
-              <item name="Public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UC_Android" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UC_Android" type="462c0819:PsiDirectoryNode" />
-              <item name="Report" type="462c0819:PsiDirectoryNode" />
+              <item name="Test_case" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="UC_Android" type="b2602c69:ProjectViewProjectNode" />
               <item name="UC_Android" type="462c0819:PsiDirectoryNode" />
               <item name="Test_case" type="462c0819:PsiDirectoryNode" />
+              <item name="Logout" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -168,6 +123,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\JK\UC_Android\Test_case\Logout" />
       <recent name="E:\JK\UC_Android\Test_case" />
       <recent name="E:\JK\UC_Android\Report" />
       <recent name="E:\JK\UC_Android\Public" />
@@ -235,7 +191,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/Demo.py">
+    <entry file="file://$PROJECT_DIR$/Test_case/Demo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -243,15 +199,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Log/Demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Demo.py">
+    <entry file="file://$PROJECT_DIR$/Run_Alltest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -267,10 +215,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test_case/Demo.py">
+    <entry file="file://$PROJECT_DIR$/Public/Demo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Log/Demo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/Demo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+          <folding>
+            <element signature="e#178#800#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test_case/Logout/Logout.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="26" column="23" lean-forward="true" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
           <folding />
         </state>
       </provider>

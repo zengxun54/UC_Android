@@ -3,6 +3,7 @@ import unittest
 from appium import webdriver
 import os
 import time
+import  configparser
 import HTMLTestRunner
 
 
@@ -27,19 +28,21 @@ class Login (unittest.TestCase):
         pass
 
     def test_logout(self):
+        conf = configparser.ConfigParser ()
+        conf.read ("../config/parameters.ini", encoding='utf-8')
         # 点击左上角个人头像
-        self.driver.find_element_by_id ('com.yealink.uc.android.alpha:id/iv_head').click ()
+        self.driver.find_element_by_id (conf.get('个人中心','个人头像')).click ()
         time.sleep (3)
         # 点击设置
-        self.driver.find_element_by_id ('com.yealink.uc.android.alpha:id/rllt_user_setting').click ()
+        self.driver.find_element_by_id (conf.get('个人中心','设置')).click ()
         time.sleep (3)
         # 点击退出当前账号
-        self.driver.find_element_by_id ('com.yealink.uc.android.alpha:id/btn_logout').click ()
+        self.driver.find_element_by_id (conf.get('个人中心','退出当前账号')).click ()
         time.sleep (5)
         # 点击确定
-        self.driver.find_element_by_id ('com.yealink.uc.android.alpha:id/positiveButton').click ()
+        self.driver.find_element_by_id (conf.get('个人中心','确定退出')).click ()
         source = self.driver.page_source
-        el = ('com.yealink.uc.android.alpha:id/btn_login')
+        el = ('com.yealink.uc.android:id/btn_login')
         try:
             assert el in source
         except Exception as msg:
@@ -48,13 +51,3 @@ class Login (unittest.TestCase):
 
 if __name__== '__main__':
     unittest.main ()
-
-    # ts = unittest.TestSuite ()
-    # # 将测试用例加入到测试容器中
-    # print ts
-    # ts.addTest (Login ("test_logout"))
-    # report_path = r'E:\testresult.html'
-    # fp = open (report_path, "wb")
-    # runner = HTMLTestRunner.HTMLTestRunner (stream=fp, title="自动化测试unittest测试框架报告", description="用例执行情况：")
-    # runner.run (ts)
-    # fp.close ()
