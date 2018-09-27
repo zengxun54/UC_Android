@@ -5,7 +5,7 @@ import sys
 import time
 import unittest
 
-sys.path.append("../")
+sys.path.append("../../")
 from Public.publicMethod_tj import *
 
 

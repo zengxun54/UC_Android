@@ -8,7 +8,7 @@ import time
 import re
 from Discussion.createDiscussion import *
 
-sys.path.append("../")
+sys.path.append("../../")
 from Public.publicMethod_tj import *
 
 class discussionSetting(unittest.TestCase):
