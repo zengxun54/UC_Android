@@ -128,3 +128,7 @@ class Login(unittest.TestCase):
         self.config_factory.always_allow(self.driver,3)
         #校验当前activity是否为mainactivity
         self.assertEqual(self.driver.current_activity,'com.yealink.uc.android.MainActivity',msg="未登录成功")
+
+
+if __name__== '__main__':
+     unittest.main ()
