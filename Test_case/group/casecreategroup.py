@@ -102,6 +102,7 @@ class Testcreategroup(unittest.TestCase):
         name1 = random.randint(0, 100)
         name2 = 'liujxcreat' + str(name1)
         self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/edit_group_name').send_keys(name2)
+        self.driver.hide_keyboard()
         time.sleep(5)
         self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/btn_next').click()
         time.sleep(2)
