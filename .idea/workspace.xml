@@ -2,69 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a7fe29f-94d7-403f-a866-938d73a3f1db" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android.rar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/AdbWinApi.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/AdbWinUsbApi.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/log/20180928-21-03-10.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/log/yealinkume.tar.gz" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/tcpdump" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/tool/7z.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/tool/7z.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/tool/curl.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/adbforward.bat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/log/android.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/anr_info.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/anr_info_com.android.email_2018-06-07_13_55_51.880.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/anr_info_com.yealink.uc.android.alpha_2018-06-19_11_50_41.534.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/anr_info_com.yealink.uc.android.alpha_2018-06-19_14_15_10.267.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/anr_info_com.yealink.uc.android.alpha_2018-06-19_16_45_54.932.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/anr_info_com.yealink.uc.android.alpha_2018-09-28_19_27_08.962.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/anr_info_com.yealink.uc.android_2018-06-22_11_21_15.999.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/anr_info_com.yealink.uc.android_2018-06-22_14_05_46.820.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/anr_info_com.yealink.videophone_2018-06-13_16_55_31.340.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/anr_info_com.yealink.videophone_2018-06-14_11_03_48.937.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/anr_info_com.yealink.videophone_2018-06-14_11_56_00.792.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/anr_info_com.yealink.videophone_2018-06-19_09_35_01.915.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/anr_info_com.yealink.videophone_2018-06-26_16_56_00.144.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/traces.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/traces.txt.bugreport" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/traces_com.android.email_2018-06-07_13_55_54.713.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/traces_com.miui.cloudbackup_2018-06-07_14_48_36.012.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/traces_com.yealink.uc.android.alpha_2018-06-19_11_50_44.935.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/traces_com.yealink.uc.android.alpha_2018-06-19_14_15_13.079.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/traces_com.yealink.uc.android.alpha_2018-06-19_16_45_57.788.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/traces_com.yealink.uc.android.alpha_2018-09-28_19_27_29.174.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/traces_com.yealink.uc.android_2018-06-22_11_21_19.560.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/traces_com.yealink.uc.android_2018-06-22_14_05_50.372.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/traces_com.yealink.videophone_2018-06-13_16_55_34.906.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/traces_com.yealink.videophone_2018-06-14_11_03_52.470.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/traces_com.yealink.videophone_2018-06-14_11_56_08.507.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/traces_com.yealink.videophone_2018-06-19_09_35_04.533.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/traces_com.yealink.videophone_2018-06-26_16_56_03.652.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/log/traces.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/packup_ume_android.bat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/使用说明.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/开始挂机.bat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/packup_ume_android/重启.bat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/testcase.xls" afterPath="$PROJECT_DIR$/config/testcase.xls" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Public/packup_ume_android/log/20180928-21-03-10.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Public/packup_ume_android/log/android.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/anr_info.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/anr_info_com.android.email_2018-06-07_13_55_51.880.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/anr_info_com.yealink.uc.android.alpha_2018-06-19_11_50_41.534.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/anr_info_com.yealink.uc.android.alpha_2018-06-19_14_15_10.267.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/anr_info_com.yealink.uc.android.alpha_2018-06-19_16_45_54.932.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/anr_info_com.yealink.uc.android.alpha_2018-09-28_19_27_08.962.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/anr_info_com.yealink.uc.android_2018-06-22_11_21_15.999.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/anr_info_com.yealink.uc.android_2018-06-22_14_05_46.820.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/anr_info_com.yealink.videophone_2018-06-13_16_55_31.340.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/anr_info_com.yealink.videophone_2018-06-14_11_03_48.937.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/anr_info_com.yealink.videophone_2018-06-14_11_56_00.792.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/anr_info_com.yealink.videophone_2018-06-19_09_35_01.915.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/anr_info_com.yealink.videophone_2018-06-26_16_56_00.144.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/traces.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/traces.txt.bugreport" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/traces_com.android.email_2018-06-07_13_55_54.713.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/traces_com.miui.cloudbackup_2018-06-07_14_48_36.012.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/traces_com.yealink.uc.android.alpha_2018-06-19_11_50_44.935.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/traces_com.yealink.uc.android.alpha_2018-06-19_14_15_13.079.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/traces_com.yealink.uc.android.alpha_2018-06-19_16_45_57.788.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/traces_com.yealink.uc.android.alpha_2018-09-28_19_27_29.174.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/traces_com.yealink.uc.android_2018-06-22_11_21_19.560.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/traces_com.yealink.uc.android_2018-06-22_14_05_50.372.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/traces_com.yealink.videophone_2018-06-13_16_55_34.906.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/traces_com.yealink.videophone_2018-06-14_11_03_52.470.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/traces_com.yealink.videophone_2018-06-14_11_56_08.507.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/traces_com.yealink.videophone_2018-06-19_09_35_04.533.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Public/packup_ume_android/log/trace/traces_com.yealink.videophone_2018-06-26_16_56_03.652.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Public/packup_ume_android/log/traces.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Public/packup_ume_android/log/yealinkume.tar.gz" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/commonClass.py" afterPath="$PROJECT_DIR$/Public/commonClass.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/publicMethod_tj.py" afterPath="$PROJECT_DIR$/Public/publicMethod_tj.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test_case/DialPlate/VideoCallCase.py" afterPath="$PROJECT_DIR$/Test_case/DialPlate/VideoCallCase.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test_case/DialPlate/callBackCase.py" afterPath="$PROJECT_DIR$/Test_case/DialPlate/callBackCase.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test_case/DialPlate/callRecordCase.py" afterPath="$PROJECT_DIR$/Test_case/DialPlate/callRecordCase.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test_case/DialPlate/callRecordDetailCase.py" afterPath="$PROJECT_DIR$/Test_case/DialPlate/callRecordDetailCase.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test_case/DialPlate/circleStart.py" afterPath="$PROJECT_DIR$/Test_case/DialPlate/circleStart.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test_case/Discussion/chatDiscussion.py" afterPath="$PROJECT_DIR$/Test_case/Discussion/chatDiscussion.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test_case/Discussion/discussionSetting.py" afterPath="$PROJECT_DIR$/Test_case/Discussion/discussionSetting.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test_case/IMChat/IMCreateDiscussion.py" afterPath="$PROJECT_DIR$/Test_case/IMChat/IMCreateDiscussion.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test_case/IMChat/IM_AudioCall.py" afterPath="$PROJECT_DIR$/Test_case/IMChat/IM_AudioCall.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test_case/IMChat/IM_VideoCall.py" afterPath="$PROJECT_DIR$/Test_case/IMChat/IM_VideoCall.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test_case/IMChat/SendMsg.py" afterPath="$PROJECT_DIR$/Test_case/IMChat/SendMsg.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test_case/Meeting/Meetingnow.py" afterPath="$PROJECT_DIR$/Test_case/Meeting/Meetingnow.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.ini" afterPath="$PROJECT_DIR$/config/config.ini" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/parameters.ini" afterPath="$PROJECT_DIR$/config/parameters.ini" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run_test_case.py" afterPath="$PROJECT_DIR$/run_test_case.py" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -95,8 +65,8 @@
       <file leaf-file-name="run_test_case.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/run_test_case.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.662037">
-              <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.4814815">
+              <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -751,7 +721,13 @@
       <option name="project" value="LOCAL" />
       <updated>1538127238895</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="xxx">
+      <created>1538140241481</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1538140241481</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -805,7 +781,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="删除部分收起键盘步骤" />
-    <option name="LAST_COMMIT_MESSAGE" value="删除部分收起键盘步骤" />
+    <MESSAGE value="xxx" />
+    <option name="LAST_COMMIT_MESSAGE" value="xxx" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1224,8 +1201,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/run_test_case.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.662037">
-          <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.4814815">
+          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
           <folding />
         </state>
       </provider>
