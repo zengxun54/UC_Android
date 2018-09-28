@@ -49,7 +49,7 @@ class Testtalk(unittest.TestCase):
             self.assertIsNotNone(head)
             print('创建群页面展示成功')
         except AssertionError as e:
-            AssertionError:('创建群页面展示失败')
+            raise('创建群页面展示失败')
             saveScreenshot.saveScreenshot(self.driver, "创建群页面展示失败")
         name1 = random.randint(0,100)
         name2 = 'liujxtalk'+ str(name1)
@@ -74,7 +74,7 @@ class Testtalk(unittest.TestCase):
             print('创建群失败')
             saveScreenshot.saveScreenshot(self.driver, "创建群失败")
         self.driver.find_element_by_id("com.yealink.uc.android.alpha:id/chat_bar_editor").send_keys('@')
-        self.driver.hide_keyboard()
+        #self.driver.hide_keyboard()
         #print('输入@')
         time.sleep(3)
         # 增加断言判断检查设置页面是否有展示出来

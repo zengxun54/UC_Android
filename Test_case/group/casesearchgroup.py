@@ -41,7 +41,7 @@ class Testsearchgroup(unittest.TestCase):
             #saveScreenshot.saveScreenshot(self.driver, "群搜索页面展示成功")
         except AssertionError as e:
             saveScreenshot.saveScreenshot(self.driver, "群搜索页面展示失败")
-            AssertionError: ('群搜索页面展示失败')
+            raise('群搜索页面展示失败')
         search = self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/edit')
         page="liujx"
         search.send_keys(page)
@@ -53,7 +53,7 @@ class Testsearchgroup(unittest.TestCase):
             self.assertIsNotNone(list1) and self.assertIn(list1 in  page)
             print('查找群成功功能正常')
         except AssertionError as e:
-            AssertionError: ('查找群失败')
+            raise('查找群失败')
             saveScreenshot.saveScreenshot(self.driver, "查找群失败")
         time.sleep(3)
     def tearDown(self):

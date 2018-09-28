@@ -51,7 +51,7 @@ class Testcreategroup(unittest.TestCase):
             print('创建群页面展示成功')
             #saveScreenshot.saveScreenshot(self.driver, "创建群页面展示成功")
         except AssertionError as e:
-            AssertionError:('创建群页面展示失败')
+            raise('创建群页面展示失败')
             saveScreenshot.saveScreenshot(self.driver, "创建群页面展示失败")
         #获取群名称灰色提示语
         groupname=self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/edit_group_name').text
@@ -120,3 +120,5 @@ class Testcreategroup(unittest.TestCase):
     def tearDown(self):
         self.driver.quit()
         pass
+# if __name__== '__main__':
+#     unittest.main(verbosity=2)

@@ -49,7 +49,7 @@ class Testcasetalkfile(unittest.TestCase):
             self.assertIsNotNone(head)
             print('创建群页面展示成功')
         except AssertionError as e:
-            AssertionError:('创建群页面展示失败')
+            raise('创建群页面展示失败')
             saveScreenshot.saveScreenshot(self.driver, "创建群页面展示失败")
         name1 = random.randint(0,100)
         name2 = 'liujxtalkfile'+ str(name1)
@@ -59,7 +59,7 @@ class Testcasetalkfile(unittest.TestCase):
         self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/btn_next').click()
         time.sleep(2)
         self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/contact_search').send_keys('liaozz')
-        self.driver.hide_keyboard()
+        #self.driver.hide_keyboard()
         time.sleep(4)
         self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/contact_icon').click()
         time.sleep(2)

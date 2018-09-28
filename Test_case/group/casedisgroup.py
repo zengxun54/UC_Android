@@ -48,7 +48,7 @@ class Testdisgroup(unittest.TestCase):
             self.assertIsNotNone(head)
             print('创建群页面展示成功')
         except AssertionError as e:
-            AssertionError:('创建群页面展示失败')
+            raise('创建群页面展示失败')
             saveScreenshot.saveScreenshot(self.driver, "创建群页面展示失败")
         name1 = random.randint(0,100)
         name2 = 'liujxdis'+ str(name1)

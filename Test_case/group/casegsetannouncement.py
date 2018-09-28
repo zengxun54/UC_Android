@@ -42,17 +42,18 @@ class TestGsetAnnouncement(unittest.TestCase):
             self.assertIsNotNone(head)
             print('创建群页面展示成功')
         except AssertionError as e:
-            AssertionError:('创建群页面展示失败')
+            raise ('创建群页面展示失败')
             saveScreenshot.saveScreenshot(self.driver, "创建群页面展示失败")
         name1 = random.randint(0,100)
         name2 = 'liujxannou'+ str(name1)
+
         self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/edit_group_name').send_keys(name2)
         self.driver.hide_keyboard()
         time.sleep(5)
         self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/btn_next').click()
         time.sleep(2)
         self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/contact_search').send_keys('liaozz')
-        self.driver.hide_keyboard()
+        #self.driver.hide_keyboard()
         time.sleep(4)
         self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/contact_icon').click()
         time.sleep(2)
@@ -95,7 +96,7 @@ class TestGsetAnnouncement(unittest.TestCase):
                 saveScreenshot.saveScreenshot(self.driver, "群公告新增成功功能正常")
             except AssertionError as e:
                 saveScreenshot.saveScreenshot(self.driver, "群公告新增失败")
-                AssertionError: ('群公告新增失败')
+                raise('群公告新增失败')
         except:
             self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/btn_edit').click()
             time.sleep(2)
@@ -107,7 +108,7 @@ class TestGsetAnnouncement(unittest.TestCase):
                 saveScreenshot.saveScreenshot(self.driver, "群公告修改成功功能正常")
             except AssertionError as e:
                 saveScreenshot.saveScreenshot(self.driver, "群公告修改失败")
-                AssertionError: ('群公告修改失败')
+                raise('群公告修改失败')
         # annou=self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/tv_empty')
         # #print(annou)
         # if annou is False:

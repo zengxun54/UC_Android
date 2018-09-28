@@ -43,7 +43,7 @@ class TestGsetName(unittest.TestCase):
             print('创建群页面展示成功')
             #saveScreenshot.saveScreenshot(self.driver, "创建群页面展示成功")
         except AssertionError as e:
-            AssertionError: ('创建群页面展示失败')
+            raise('创建群页面展示失败')
             saveScreenshot.saveScreenshot(self.driver, "创建群页面展示失败")
         name1 = random.randint(0, 100)
         name2 = 'liujxsetname' + str(name1)
@@ -55,7 +55,7 @@ class TestGsetName(unittest.TestCase):
         self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/btn_next').click()
         time.sleep(2)
         self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/contact_search').send_keys('liaozz')
-        self.driver.hide_keyboard()
+        #self.driver.hide_keyboard()
         time.sleep(4)
         self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/contact_icon').click()
         time.sleep(2)
@@ -77,7 +77,7 @@ class TestGsetName(unittest.TestCase):
             self.assertIsNotNone(stitle)
         except AssertionError as e:
             saveScreenshot.saveScreenshot(self.driver, "编辑名称页面展示失败")
-            AssertionError:('编辑名称页面展示失败')
+            raise('编辑名称页面展示失败')
         #oldname = self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/personal_detail_edit').text
         self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/personal_detail_edit').send_keys('newliujx1')
         self.driver.hide_keyboard()
@@ -90,7 +90,7 @@ class TestGsetName(unittest.TestCase):
             print('群名称修改正常功能正常')
         except AssertionError as e:
             saveScreenshot.saveScreenshot(self.driver, "群名称修改失败")
-            AssertionError:('群名称修改失败')
+            raise('群名称修改失败')
 
     def tearDown(self):
         self.driver.quit()
