@@ -132,7 +132,7 @@ class discussionSetting(unittest.TestCase):
         self.driver.find_element_by_id(packageName + 'contact_search').send_keys("梁欣")
         time.sleep(1)
         self.driver.find_element_by_xpath("//android.widget.RelativeLayout[@resource-id='"+packageName+"contact_child_item']").click()
-        time.sleep(1)
+        time.sleep(3)
         self.driver.find_element_by_id(packageName + 'et_select_member_search').send_keys("刘博琛")
         time.sleep(1)
         self.driver.find_element_by_xpath("//android.widget.RelativeLayout[@resource-id='"+packageName+"contact_child_item']").click()

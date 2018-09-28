@@ -7,7 +7,7 @@ import configparser
 from appium import  webdriver
 from Public import commonClass
 class SendMsg (unittest.TestCase):
-    @classmethod
+    # @classmethod
     def setUpClass(self):
         print('SendMsg setup')
         # debug_id_pre = 'com.yealink.uc.android.alpha:id/'
@@ -15,7 +15,7 @@ class SendMsg (unittest.TestCase):
         self.driver = self.commonCls.startUpApp()
         self.paramter = self.commonCls.paramter
         # 启动app时，需要一定时间进入引导页，所以必须设置等待时间，不然下面会一直报错定位不到元素
-    @classmethod
+    # @classmethod
     def tearDownClass(self):
         pass
         # self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/left_btn').click()#返回最近会话列表
@@ -24,7 +24,7 @@ class SendMsg (unittest.TestCase):
         time.sleep(20)
         print('test_sendimage')
         conf = configparser.ConfigParser()
-        conf.read ("config/parameters.ini",encoding='utf-8')
+        conf.read (commonClass.param_url,encoding='utf-8')
         username=conf.get ("单人聊天", "单人聊天用户")
         self.driver.find_element_by_name(username).click ()  # 进入和某人的IM聊天界面
         time.sleep(5)
@@ -45,8 +45,8 @@ class SendMsg (unittest.TestCase):
         conf = configparser.ConfigParser()
         conf.read (commonClass.param_url,encoding='utf-8')
         abc='Test msg'
-        # username=conf.get ("单人聊天", "单人聊天用户")
-        # self.driver.find_element_by_name(username).click()#进入和某人的IM聊天界面
+        username=conf.get ("单人聊天", "单人聊天用户")
+        self.driver.find_element_by_name(username).click()#进入和某人的IM聊天界面
         self.driver.find_element_by_id(conf.get ("单人聊天", "文本输入框")).send_keys(abc)#在文本输入框输入需要发送的文本
         self.driver.find_element_by_id (conf.get ("单人聊天", "发送")).click()#点击发送
 
@@ -67,9 +67,9 @@ class SendMsg (unittest.TestCase):
         except Exception as msg:
             print('发送失败！')
             raise('发送失败！')
-    def test_send_msg_wait(self):
-        time.sleep(60)
-if __name__== '__main__':
-    unittest.main ()
+#     def test_send_msg_wait(self):
+#         time.sleep(60)
+# if __name__== '__main__':
+#     unittest.main ()
 
 

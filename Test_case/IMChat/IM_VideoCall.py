@@ -42,7 +42,7 @@ class VideoCall (unittest.TestCase):
         except Exception as msg:
             print ('未进入通话界面！')
             raise
-    def test_b_call_statistics(self):
+    # def test_b_call_statistics(self):
         time.sleep(3)
         conf = configparser.ConfigParser ()
         conf.read (commonClass.param_url, encoding='utf-8')
@@ -61,9 +61,9 @@ class VideoCall (unittest.TestCase):
         except Exception as msg:
             print ('通话数据异常！')
             raise
-    def  test_video_call_wait(self):
-        time.sleep(60)
-if __name__ == '__main__':
-    unittest.main()
+#     def  test_video_call_wait(self):
+#         time.sleep(60)
+# if __name__ == '__main__':
+#     unittest.main()
 
 

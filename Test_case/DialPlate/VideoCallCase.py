@@ -30,7 +30,7 @@ class VideoCallCase(unittest.TestCase):
         call_num_str = '4001'
         result = self.commonCls.call_num(self.driver,call_num_str)
         self.commonCls.result_handler(result,"未进入通话界面")
-    def test_2call_statstic(self):
+    # def test_2call_statstic(self):
         print('23')
         debug_id_pre = commonClass.debug_id_pre
         # com.yealink.uc.android.alpha:id/time_container
@@ -39,18 +39,22 @@ class VideoCallCase(unittest.TestCase):
         # self.driver.find_element_by_id(debug_id_pre+'time_container').click()
         time.sleep(1)
         # 判断发送分辨率或帧率是否为0
-        black_screen_send = self.commonCls.get_resolution_and_fps(self.driver)
-        try:
-            assert black_screen_send
-        except Exception as msg:
-            raise ('发送分辨率或帧率为0')
+        # black_screen_send = self.commonCls.get_resolution_and_fps(self.driver)
+        result = self.commonCls.get_resolution_and_fps(self.driver)
+        self.commonCls.result_handler(result,'发送分辨率或帧率为0')
+        # try:
+        #     assert black_screen_send
+        # except Exception as msg:
+        #     raise ('发送分辨率或帧率为0')
         self.driver.find_element_by_name('接收').click()
-        black_screen_resv = self.commonCls.get_resolution_and_fps(self.driver)
-        try:
-            assert black_screen_resv
-        except Exception as msg:
-            raise ('接收分辨率或帧率为0')
-    def test_3hang_up(self):#挂断通话
+        # black_screen_resv = self.commonCls.get_resolution_and_fps(self.driver)
+        result = self.commonCls.get_resolution_and_fps(self.driver)
+        self.commonCls.result_handler(result,'接收分辨率或帧率为0')
+        # try:
+        #     assert black_screen_resv
+        # except Exception as msg:
+        #     raise ('接收分辨率或帧率为0')
+    # def test_3hang_up(self):#挂断通话
         debug_id_pre = commonClass.debug_id_pre
         time.sleep(1)
         # self.driver.find_element_by_id(debug_id_pre+self.paramter.get("dialPlate", "left_btn")).click()
@@ -62,22 +66,12 @@ class VideoCallCase(unittest.TestCase):
         # iv_call_send = (debug_id_pre+self.paramter.get("dialPlate", "calllog_title"))
         iv_call_send = (self.commonCls.get_conf("dialPlate","calllog_title"))
         source = self.driver.page_source
-        try:
-            assert iv_call_send in source
-        except Exception as msg:
-            # print('未进入通话界面！')
-            raise ('通话界面未挂断')
-    def test_4wait(self):
-        time.sleep(60)
+        result = iv_call_send in source
+        self.commonCls.result_handler(result,'通话界面未挂断')
+        # try:
+        #     assert iv_call_send in source
+        # except Exception as msg:
+        #     # print('未进入通话界面！')
+        #     raise ('通话界面未挂断')
 # if __name__ == '__main__':
 #     unittest.main(verbosity=2)
-    # suite = unittest.TestSuite()
-    # # 将测试用例加入到测试容器中
-    # print(suite)
-    # suite.addTests([VideoCallCase('test_1call_num'),VideoCallCase('test_2call_statstic'),VideoCallCase('test_3hang_up')])
-    # report_path = r'E:\testresult.html'
-    # fp = open(report_path, "wb")
-    # runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title="自动化测试unittest测试框架报告", description="用例执行情况：")
-    # runner.run(suite)
-    # print('123')
-    # fp.close()

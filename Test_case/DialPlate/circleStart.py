@@ -25,9 +25,9 @@ class circleACase(unittest.TestCase):
         print('tearDown')
         # pass
     # @unittest.skip("demonstrating skipping")
-    @unittest.skip("demonstrating skipping")
-    def test_4wait(self):
-        time.sleep(60)
+    # @unittest.skip("demonstrating skipping")
+    # def test_4wait(self):
+    #     time.sleep(60)
 # if __name__ == '__main__':
 #     unittest.main(verbosity=2)
     # suite = unittest.TestSuite()

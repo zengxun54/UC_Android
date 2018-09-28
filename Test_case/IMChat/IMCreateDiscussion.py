@@ -46,7 +46,7 @@ class CreateDiscussion (unittest.TestCase):
         except Exception as msg:
             # print()
             raise("讨论组创建失败！")
-    def  test_creatediscussion_wait(self):
-        time.sleep(60)
+    # def  test_creatediscussion_wait(self):
+    #     time.sleep(60)
 # if __name__== '__main__':
 #     unittest.main ()

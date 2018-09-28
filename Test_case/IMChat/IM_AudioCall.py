@@ -47,7 +47,7 @@ class AudioCall (unittest.TestCase):
         except Exception as msg:
             print ('未进入通话界面！')
             raise
-    def test_call_statistics(self):
+    # def test_call_statistics(self):
         print('test_call_statistics')
         debug_id_pre = commonClass.debug_id_pre
         conf = configparser.ConfigParser ()
@@ -65,9 +65,9 @@ class AudioCall (unittest.TestCase):
             self.driver.find_element_by_id(debug_id_pre+'hangup').click()#点击挂断图标
             raise
         self.driver.find_element_by_id(debug_id_pre+'hangup').click()#点击挂断图标
-    def test_Audio_wait(self):
-        time.sleep(60)
-if __name__ == '__main__':
-    unittest.main()
+    # def test_Audio_wait(self):
+    #     time.sleep(60)
+# if __name__ == '__main__':
+#     unittest.main()
 
 

@@ -4,11 +4,12 @@ from appium import webdriver
 import os
 import time,configparser
 import re
+from subprocess import Popen
 debug_id_pre = 'com.yealink.uc.android:id/'
 # conf_url = "../../config/config.ini"#单个运行
 # param_url = "../../config/parameters.ini"#单个运行
-conf_url = "config/config.ini"#单个运行
-param_url = "config/parameters.ini"#单个运行
+conf_url = "config/config.ini"#批量运行
+param_url = "config/parameters.ini"#批量运行
 class commonCase(unittest.TestCase):
     def __init__(self,debug_id_pre):
         self.debug_id_pre = debug_id_pre
@@ -35,6 +36,7 @@ class commonCase(unittest.TestCase):
         desired_cups['app'] = PATH(self.conf.get("Appium", "appPackage"))
         desired_cups['appWaitActivity'] = self.conf.get("Appium", "appWaitActivity")
         desired_cups['noReset'] = True
+        desired_cups['sessionOverride'] = True
         # 启动app
         # print(self.conf.get("Appium", "url"))
         # exit(0)
@@ -146,16 +148,23 @@ class commonCase(unittest.TestCase):
         try:
             assert result
         except Exception:
+            # self.packup_log()
             raise(error)
     def get_conf(self,option,value):
         paramter = self.debug_id_pre+self.paramter.get(option,value)
         return paramter
     def restart_adb(self):
-        kill_adb_cmd = 'adb kill-server'
-        start_adb_cmd = 'adb start-server'
+        # kill_adb_cmd = 'adb kill-server'
+        kill_adb_cmd = 'taskkill /im adb.exe'
         # os.chdir(retval+module_dir)
         # time.sleep(10)
         if not (os.system(kill_adb_cmd)==0):
             os.system(kill_adb_cmd)#不成功就启动
-        print('success')
+        print('kill success')
         # os.system(start_adb_cmd)#成功就启动
+    def packup_log(self):
+        # self.restart_adb()
+        packup_file_name = self.conf.get("packup", "packup_file_name")
+        packup_file_path = self.conf.get("packup", "packup_file_path")
+        p = Popen(packup_file_name, cwd=packup_file_path,shell=True)
+        stdout, stderr = p.communicate()

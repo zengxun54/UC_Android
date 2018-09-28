@@ -46,21 +46,25 @@ class callRecordCase(unittest.TestCase):
         #获取第一条通话记录的记录数
         global calllog_first_count
         calllog_first_count = self.commonCls.get_first_calllog_info(self.driver,'call_log_name')
-    def test_2call_num(self):
+    # def test_2call_num(self):
         call_num_str = self.call_num_str
         result = self.commonCls.call_num(self.driver,call_num_str)
         self.commonCls.result_handler(result,"未进入通话界面")
-    def test_3hang_up(self):#挂断通话
+    # def test_3hang_up(self):#挂断通话
         self.commonCls.hang_up(self.driver)
         time.sleep(2)
         iv_call_send = (self.commonCls.debug_id_pre+'tv_recent_calllog_title')
         source = self.driver.page_source
-        try:
-            assert iv_call_send in source
-        except Exception as msg:
-            # print('未进入通话界面！')
-            raise ('通话界面未挂断')
-    def test_4check_call_record(self):
+        result = iv_call_send in source
+        # msg = self.first_calllog_type+'界面没有！'+button
+        self.commonCls.result_handler(result,'通话界面未挂断')
+        #
+        # try:
+        #     assert iv_call_send in source
+        # except Exception as msg:
+        #     # print('未进入通话界面！')
+        #     raise ('通话界面未挂断')
+    # def test_4check_call_record(self):
         source = self.driver.page_source
         debug_id_pre = commonClass.debug_id_pre
         el = debug_id_pre+'iv_call_send'
@@ -82,13 +86,16 @@ class callRecordCase(unittest.TestCase):
         print(calllog_first_count)
         print('calllog_first_count_after_callback')
         print(calllog_first_count_after_callback)
-        try:
-            assert not (int(calllog_all_count_after_callback) != int(calllog_all_count)+1 and int(calllog_first_count_after_callback) != int(calllog_first_count)+1)
-        except Exception as msg:
-            # print('未进入通话界面！')
-            raise ('通话记录数显示不正确')
-    def test_5wait(self):
-        time.sleep(60)
+        result = (int(calllog_all_count_after_callback) != int(calllog_all_count)+1 and int(calllog_first_count_after_callback) != int(calllog_first_count)+1)
+        # msg = self.first_calllog_type+'界面没有！'+button
+        self.commonCls.result_handler(result,'通话记录数显示不正确')
+        # try:
+        #     assert not (int(calllog_all_count_after_callback) != int(calllog_all_count)+1 and int(calllog_first_count_after_callback) != int(calllog_first_count)+1)
+        # except Exception as msg:
+        #     # print('未进入通话界面！')
+        #     raise ('通话记录数显示不正确')
+    # def test_5wait(self):
+    #     time.sleep(60)
 # if __name__== '__main__':
 #     unittest.main(verbosity=2)
 #     suite = unittest.TestSuite()

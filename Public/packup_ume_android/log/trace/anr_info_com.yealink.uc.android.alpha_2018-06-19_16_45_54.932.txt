@@ -1,0 +1,25 @@
+ANR in com.yealink.uc.android.alpha
+PID: 6267
+Reason: executing service com.yealink.uc.android.alpha/com.yealink.base.debug.monitor.UiMonitorService
+ package com.yealink.uc.android.alpha version Code: 964 version Name: 1.0.288.964 cur loop is : Looper (main, tid 1) {a8f205c}
+Dump time : 2018-06-19 16:45:54.853+0800
+---------- History of long time messages on Looper (main, tid 1) {a8f205c}----------
+-------------------------- END --------------------------
+---------- Dump MessageQueue on Looper (main, tid 1) {a8f205c}----------
+Running message is { when=-20s110ms what=114 obj=CreateServiceData{token=android.os.BinderProxy@2068e3d className=com.yealink.base.debug.monitor.UiMonitorService packageName=com.yealink.uc.android.alpha intent=null} target=android.app.ActivityThread$H planTime=1529397934758 dispatchTime=1529397934974 finishTime=0 }
+Message 0: { when=-20s114ms what=115 obj=ServiceArgsData{token=android.os.BinderProxy@2068e3d startId=1 args=Intent { cmp=com.yealink.uc.android.alpha/com.yealink.base.debug.monitor.UiMonitorService }} target=android.app.ActivityThread$H planTime=1529397934759 dispatchTime=0 finishTime=0 }
+Message 1: { when=-20s113ms what=114 obj=CreateServiceData{token=android.os.BinderProxy@43fb43a className=com.yealink.uc.android.NotifyService packageName=com.yealink.uc.android.alpha intent=null} target=android.app.ActivityThread$H planTime=1529397934760 dispatchTime=0 finishTime=0 }
+Message 2: { when=-20s112ms what=115 obj=ServiceArgsData{token=android.os.BinderProxy@43fb43a startId=1 args=Intent { cmp=com.yealink.uc.android.alpha/com.yealink.uc.android.NotifyService }} target=android.app.ActivityThread$H planTime=1529397934761 dispatchTime=0 finishTime=0 }
+Message 3: { when=-19s932ms what=101 arg1=1 obj=android.os.BinderProxy@67176c4 target=android.app.ActivityThread$H planTime=1529397934941 dispatchTime=0 finishTime=0 }
+Message 4: { when=-19s900ms what=32 obj= target=android.telephony.PhoneStateListener$1 planTime=1529397934972 dispatchTime=0 finishTime=0 }
+Message 5: { when=-19s782ms callback=android.app.LoadedApk$ReceiverDispatcher$Args target=android.app.ActivityThread$H planTime=1529397935091 dispatchTime=0 finishTime=0 }
+Message 6: { when=-19s428ms what=100 obj=ActivityRecord{6e598eb token=android.os.BinderProxy@51be648 {com.yealink.uc.android.alpha/com.yealink.uc.android.login.WaitingActivity}} target=android.app.ActivityThread$H planTime=1529397935445 dispatchTime=0 finishTime=0 }
+Message 7: { when=-19s114ms what=149 obj=android.os.BinderProxy@51be648 target=android.app.ActivityThread$H planTime=1529397935759 dispatchTime=0 finishTime=0 }
+Message 8: { when=-18s674ms callback=ylLogic.JavaInterface$2 target=android.os.Handler planTime=1529397936199 dispatchTime=0 finishTime=0 }
+Message 9: { when=-18s674ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@bb2ce1 target=android.os.AsyncTask$InternalHandler planTime=1529397936199 dispatchTime=0 finishTime=0 }
+Message 10: { when=-12s126ms what=109 arg1=1 obj=android.os.BinderProxy@67176c4 target=android.app.ActivityThread$H planTime=1529397942747 dispatchTime=0 finishTime=0 }
+Message 11: { when=-10s339ms what=132 target=android.app.ActivityThread$H planTime=1529397944534 dispatchTime=0 finishTime=0 }
+(Total messages: 12, polling=false, quitting=false)
+-------------------------- END --------------------------
+
+(dump anr info success and took 6ms)

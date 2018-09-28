@@ -1,0 +1,114 @@
+ANR in com.yealink.videophone
+PID: 19307
+Reason: Broadcast of Intent { act=android.intent.action.SCREEN_ON flg=0x50000010 }
+ package com.yealink.videophone version Code: 903 version Name: 1.26.254.10 cur loop is : Looper (main, tid 1) {c680a34}
+Dump time : 2018-06-13 16:55:31.322+0800
+---------- History of long time messages on Looper (main, tid 1) {c680a34}----------
+-------------------------- END --------------------------
+---------- Dump MessageQueue on Looper (main, tid 1) {c680a34}----------
+Running message is { when=-30s816ms what=113 obj=ReceiverData{intent=Intent { act=android.intent.action.EVENT_REMINDER dat=content://com.android.calendar/1528880100000 flg=0x14 cmp=com.yealink.videophone/.meeting.MeetingAlarmReceiver (has extras) } packageName=com.yealink.videophone resultCode=0 resultData=null resultExtras=null} target=android.app.ActivityThread$H planTime=1528880100506 dispatchTime=1528880100507 finishTime=0 }
+Message 0: { when=-29s223ms callback=com.yealink.videophone.main.NotifyService$4$1 target=android.os.Handler planTime=1528880102099 dispatchTime=0 finishTime=0 }
+Message 1: { when=-28s895ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@3a0605d target=android.os.AsyncTask$InternalHandler planTime=1528880102428 dispatchTime=0 finishTime=0 }
+Message 2: { when=-28s853ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@d938dd2 target=android.os.AsyncTask$InternalHandler planTime=1528880102470 dispatchTime=0 finishTime=0 }
+Message 3: { when=-27s890ms callback=com.yealink.videophone.main.NotifyService$4$1 target=android.os.Handler planTime=1528880103432 dispatchTime=0 finishTime=0 }
+Message 4: { when=-27s540ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@f758ea3 target=android.os.AsyncTask$InternalHandler planTime=1528880103783 dispatchTime=0 finishTime=0 }
+Message 5: { when=-27s515ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@b9595a0 target=android.os.AsyncTask$InternalHandler planTime=1528880103808 dispatchTime=0 finishTime=0 }
+Message 6: { when=-26s579ms callback=com.yealink.videophone.main.NotifyService$4$1 target=android.os.Handler planTime=1528880104744 dispatchTime=0 finishTime=0 }
+Message 7: { when=-26s246ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@c07a559 target=android.os.AsyncTask$InternalHandler planTime=1528880105076 dispatchTime=0 finishTime=0 }
+Message 8: { when=-26s207ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@f78b51e target=android.os.AsyncTask$InternalHandler planTime=1528880105115 dispatchTime=0 finishTime=0 }
+Message 9: { when=-25s288ms callback=com.yealink.videophone.main.NotifyService$4$1 target=android.os.Handler planTime=1528880106035 dispatchTime=0 finishTime=0 }
+Message 10: { when=-24s970ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@c871ff target=android.os.AsyncTask$InternalHandler planTime=1528880106352 dispatchTime=0 finishTime=0 }
+Message 11: { when=-24s944ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@24e6bcc target=android.os.AsyncTask$InternalHandler planTime=1528880106379 dispatchTime=0 finishTime=0 }
+Message 12: { when=-24s906ms callback=com.yealink.videophone.main.NotifyService$4$1 target=android.os.Handler planTime=1528880106416 dispatchTime=0 finishTime=0 }
+Message 13: { when=-24s906ms callback=com.yealink.videophone.main.MainActivity$2$1 target=android.os.Handler planTime=1528880106416 dispatchTime=0 finishTime=0 }
+Message 14: { when=-24s906ms callback=com.yealink.videophone.main.NotifyService$4$1 target=android.os.Handler planTime=1528880106417 dispatchTime=0 finishTime=0 }
+Message 15: { when=-24s906ms callback=com.yealink.videophone.main.MainActivity$2$1 target=android.os.Handler planTime=1528880106417 dispatchTime=0 finishTime=0 }
+Message 16: { when=-24s881ms what=2 obj=2 target=android.os.Handler planTime=1528880106441 dispatchTime=0 finishTime=0 }
+Message 17: { when=-24s881ms callback=com.yealink.videophone.main.MainActivity$6 target=android.os.Handler planTime=1528880106441 dispatchTime=0 finishTime=0 }
+Message 18: { when=-24s881ms what=2 obj=2 target=android.os.Handler planTime=1528880106441 dispatchTime=0 finishTime=0 }
+Message 19: { when=-24s881ms what=2 obj=2 target=android.os.Handler planTime=1528880106441 dispatchTime=0 finishTime=0 }
+Message 20: { when=-24s874ms what=2 obj=2 target=android.os.Handler planTime=1528880106449 dispatchTime=0 finishTime=0 }
+Message 21: { when=-24s874ms callback=com.yealink.videophone.main.MainActivity$6 target=android.os.Handler planTime=1528880106449 dispatchTime=0 finishTime=0 }
+Message 22: { when=-24s874ms what=2 obj=2 target=android.os.Handler planTime=1528880106449 dispatchTime=0 finishTime=0 }
+Message 23: { when=-24s874ms what=2 obj=2 target=android.os.Handler planTime=1528880106449 dispatchTime=0 finishTime=0 }
+Message 24: { when=-24s869ms what=2 obj=2 target=android.os.Handler planTime=1528880106454 dispatchTime=0 finishTime=0 }
+Message 25: { when=-24s869ms callback=com.yealink.videophone.main.MainActivity$6 target=android.os.Handler planTime=1528880106454 dispatchTime=0 finishTime=0 }
+Message 26: { when=-24s868ms what=2 obj=2 target=android.os.Handler planTime=1528880106454 dispatchTime=0 finishTime=0 }
+Message 27: { when=-24s868ms what=2 obj=2 target=android.os.Handler planTime=1528880106454 dispatchTime=0 finishTime=0 }
+Message 28: { when=-24s862ms what=2 obj=2 target=android.os.Handler planTime=1528880106460 dispatchTime=0 finishTime=0 }
+Message 29: { when=-24s862ms callback=com.yealink.videophone.main.MainActivity$6 target=android.os.Handler planTime=1528880106460 dispatchTime=0 finishTime=0 }
+Message 30: { when=-24s862ms what=2 obj=2 target=android.os.Handler planTime=1528880106460 dispatchTime=0 finishTime=0 }
+Message 31: { when=-24s862ms what=2 obj=2 target=android.os.Handler planTime=1528880106460 dispatchTime=0 finishTime=0 }
+Message 32: { when=-24s791ms callback=com.yealink.videophone.main.NotifyService$4$1 target=android.os.Handler planTime=1528880106531 dispatchTime=0 finishTime=0 }
+Message 33: { when=-24s791ms callback=com.yealink.videophone.main.MainActivity$2$1 target=android.os.Handler planTime=1528880106531 dispatchTime=0 finishTime=0 }
+Message 34: { when=-24s145ms callback=com.yealink.videophone.main.MainActivity$10 target=android.os.Handler planTime=1528880107178 dispatchTime=0 finishTime=0 }
+Message 35: { when=-24s87ms callback=com.yealink.videophone.main.MainActivity$10 target=android.os.Handler planTime=1528880107236 dispatchTime=0 finishTime=0 }
+Message 36: { when=-24s49ms callback=com.yealink.videophone.main.MainActivity$10 target=android.os.Handler planTime=1528880107274 dispatchTime=0 finishTime=0 }
+Message 37: { when=-24s21ms callback=com.yealink.videophone.main.NotifyService$4$1 target=android.os.Handler planTime=1528880107301 dispatchTime=0 finishTime=0 }
+Message 38: { when=-23s720ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@c043e15 target=android.os.AsyncTask$InternalHandler planTime=1528880107602 dispatchTime=0 finishTime=0 }
+Message 39: { when=-23s703ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@1f7052a target=android.os.AsyncTask$InternalHandler planTime=1528880107619 dispatchTime=0 finishTime=0 }
+Message 40: { when=-22s806ms callback=com.yealink.videophone.main.NotifyService$4$1 target=android.os.Handler planTime=1528880108516 dispatchTime=0 finishTime=0 }
+Message 41: { when=-22s466ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@23c2f1b target=android.os.AsyncTask$InternalHandler planTime=1528880108856 dispatchTime=0 finishTime=0 }
+Message 42: { when=-22s444ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@3dc78b8 target=android.os.AsyncTask$InternalHandler planTime=1528880108879 dispatchTime=0 finishTime=0 }
+Message 43: { when=-21s545ms callback=com.yealink.videophone.main.NotifyService$4$1 target=android.os.Handler planTime=1528880109777 dispatchTime=0 finishTime=0 }
+Message 44: { when=-21s212ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@7f7a691 target=android.os.AsyncTask$InternalHandler planTime=1528880110110 dispatchTime=0 finishTime=0 }
+Message 45: { when=-21s183ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@e5849f6 target=android.os.AsyncTask$InternalHandler planTime=1528880110140 dispatchTime=0 finishTime=0 }
+Message 46: { when=-20s267ms callback=com.yealink.videophone.main.NotifyService$4$1 target=android.os.Handler planTime=1528880111055 dispatchTime=0 finishTime=0 }
+Message 47: { when=-19s934ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@c64a1f7 target=android.os.AsyncTask$InternalHandler planTime=1528880111389 dispatchTime=0 finishTime=0 }
+Message 48: { when=-19s917ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@c3c6864 target=android.os.AsyncTask$InternalHandler planTime=1528880111406 dispatchTime=0 finishTime=0 }
+Message 49: { when=-19s5ms callback=com.yealink.videophone.main.NotifyService$4$1 target=android.os.Handler planTime=1528880112317 dispatchTime=0 finishTime=0 }
+Message 50: { when=-18s689ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@edf1acd target=android.os.AsyncTask$InternalHandler planTime=1528880112634 dispatchTime=0 finishTime=0 }
+Message 51: { when=-18s624ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@6b70f82 target=android.os.AsyncTask$InternalHandler planTime=1528880112699 dispatchTime=0 finishTime=0 }
+Message 52: { when=-17s761ms callback=com.yealink.videophone.main.NotifyService$4$1 target=android.os.Handler planTime=1528880113561 dispatchTime=0 finishTime=0 }
+Message 53: { when=-17s386ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@3376693 target=android.os.AsyncTask$InternalHandler planTime=1528880113937 dispatchTime=0 finishTime=0 }
+Message 54: { when=-17s368ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@889a6d0 target=android.os.AsyncTask$InternalHandler planTime=1528880113955 dispatchTime=0 finishTime=0 }
+Message 55: { when=-16s503ms callback=com.yealink.videophone.main.NotifyService$4$1 target=android.os.Handler planTime=1528880114819 dispatchTime=0 finishTime=0 }
+Message 56: { when=-16s193ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@84f96c9 target=android.os.AsyncTask$InternalHandler planTime=1528880115129 dispatchTime=0 finishTime=0 }
+Message 57: { when=-16s131ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@24aa1ce target=android.os.AsyncTask$InternalHandler planTime=1528880115192 dispatchTime=0 finishTime=0 }
+Message 58: { when=-15s237ms callback=com.yealink.videophone.main.NotifyService$4$1 target=android.os.Handler planTime=1528880116086 dispatchTime=0 finishTime=0 }
+Message 59: { when=-14s825ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@a67d8ef target=android.os.AsyncTask$InternalHandler planTime=1528880116498 dispatchTime=0 finishTime=0 }
+Message 60: { when=-14s817ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@a2a5ffc target=android.os.AsyncTask$InternalHandler planTime=1528880116505 dispatchTime=0 finishTime=0 }
+Message 61: { when=-13s963ms callback=com.yealink.videophone.main.NotifyService$4$1 target=android.os.Handler planTime=1528880117360 dispatchTime=0 finishTime=0 }
+Message 62: { when=-13s623ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@631d685 target=android.os.AsyncTask$InternalHandler planTime=1528880117700 dispatchTime=0 finishTime=0 }
+Message 63: { when=-13s614ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@2730cda target=android.os.AsyncTask$InternalHandler planTime=1528880117709 dispatchTime=0 finishTime=0 }
+Message 64: { when=-12s700ms callback=com.yealink.videophone.main.NotifyService$4$1 target=android.os.Handler planTime=1528880118623 dispatchTime=0 finishTime=0 }
+Message 65: { when=-12s26ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@383150b target=android.os.AsyncTask$InternalHandler planTime=1528880119297 dispatchTime=0 finishTime=0 }
+Message 66: { when=-11s891ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@bb7fe8 target=android.os.AsyncTask$InternalHandler planTime=1528880119432 dispatchTime=0 finishTime=0 }
+Message 67: { when=-11s345ms what=2 target=android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate planTime=1528880119978 dispatchTime=0 finishTime=0 }
+Message 68: { when=-11s169ms callback=android.app.LoadedApk$ReceiverDispatcher$Args target=android.app.ActivityThread$H planTime=1528880120153 dispatchTime=0 finishTime=0 }
+Message 69: { when=-11s128ms callback=com.yealink.videophone.main.NotifyService$4$1 target=android.os.Handler planTime=1528880120194 dispatchTime=0 finishTime=0 }
+Message 70: { when=-10s511ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@63e5601 target=android.os.AsyncTask$InternalHandler planTime=1528880120811 dispatchTime=0 finishTime=0 }
+Message 71: { when=-10s258ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@c851ca6 target=android.os.AsyncTask$InternalHandler planTime=1528880121064 dispatchTime=0 finishTime=0 }
+Message 72: { when=-10s227ms callback=android.app.LoadedApk$ReceiverDispatcher$Args target=android.app.ActivityThread$H planTime=1528880121096 dispatchTime=0 finishTime=0 }
+Message 73: { when=-10s212ms callback=android.app.LoadedApk$ReceiverDispatcher$Args target=android.app.ActivityThread$H planTime=1528880121111 dispatchTime=0 finishTime=0 }
+Message 74: { when=-10s4ms callback=com.yealink.videophone.main.NotifyService$4$1 target=android.os.Handler planTime=1528880121318 dispatchTime=0 finishTime=0 }
+Message 75: { when=-9s986ms callback=android.app.LoadedApk$ReceiverDispatcher$Args target=android.app.ActivityThread$H planTime=1528880121336 dispatchTime=0 finishTime=0 }
+Message 76: { when=-9s969ms callback=android.app.LoadedApk$ReceiverDispatcher$Args target=android.app.ActivityThread$H planTime=1528880121353 dispatchTime=0 finishTime=0 }
+Message 77: { when=-9s943ms callback=android.app.LoadedApk$ReceiverDispatcher$Args target=android.app.ActivityThread$H planTime=1528880121379 dispatchTime=0 finishTime=0 }
+Message 78: { when=-9s938ms callback=android.app.LoadedApk$ReceiverDispatcher$Args target=android.app.ActivityThread$H planTime=1528880121385 dispatchTime=0 finishTime=0 }
+Message 79: { when=-9s459ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@1cbf6e7 target=android.os.AsyncTask$InternalHandler planTime=1528880121863 dispatchTime=0 finishTime=0 }
+Message 80: { when=-9s143ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@6bcb294 target=android.os.AsyncTask$InternalHandler planTime=1528880122180 dispatchTime=0 finishTime=0 }
+Message 81: { when=-8s742ms callback=com.yealink.videophone.main.NotifyService$4$1 target=android.os.Handler planTime=1528880122580 dispatchTime=0 finishTime=0 }
+Message 82: { when=-8s312ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@f39513d target=android.os.AsyncTask$InternalHandler planTime=1528880123010 dispatchTime=0 finishTime=0 }
+Message 83: { when=-8s232ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@4565d32 target=android.os.AsyncTask$InternalHandler planTime=1528880123090 dispatchTime=0 finishTime=0 }
+Message 84: { when=-7s637ms callback=com.yealink.videophone.main.NotifyService$4$1 target=android.os.Handler planTime=1528880123685 dispatchTime=0 finishTime=0 }
+Message 85: { when=-7s377ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@fd71a83 target=android.os.AsyncTask$InternalHandler planTime=1528880123945 dispatchTime=0 finishTime=0 }
+Message 86: { when=-7s366ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@cfc6400 target=android.os.AsyncTask$InternalHandler planTime=1528880123956 dispatchTime=0 finishTime=0 }
+Message 87: { when=-6s631ms callback=android.app.LoadedApk$ReceiverDispatcher$Args target=android.app.ActivityThread$H planTime=1528880124691 dispatchTime=0 finishTime=0 }
+Message 88: { when=-6s616ms callback=android.app.LoadedApk$ReceiverDispatcher$Args target=android.app.ActivityThread$H planTime=1528880124706 dispatchTime=0 finishTime=0 }
+Message 89: { when=-6s610ms callback=com.yealink.videophone.main.NotifyService$4$1 target=android.os.Handler planTime=1528880124713 dispatchTime=0 finishTime=0 }
+Message 90: { when=-6s603ms callback=android.app.LoadedApk$ReceiverDispatcher$Args target=android.app.ActivityThread$H planTime=1528880124720 dispatchTime=0 finishTime=0 }
+Message 91: { when=-6s365ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@5eec439 target=android.os.AsyncTask$InternalHandler planTime=1528880124957 dispatchTime=0 finishTime=0 }
+Message 92: { when=-6s351ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@3891a7e target=android.os.AsyncTask$InternalHandler planTime=1528880124971 dispatchTime=0 finishTime=0 }
+Message 93: { when=-5s765ms callback=com.yealink.videophone.main.NotifyService$4$1 target=android.os.Handler planTime=1528880125557 dispatchTime=0 finishTime=0 }
+Message 94: { when=-5s441ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@2e6dbdf target=android.os.AsyncTask$InternalHandler planTime=1528880125881 dispatchTime=0 finishTime=0 }
+Message 95: { when=-4s808ms what=137 obj=android.os.BinderProxy@3c9e11 target=android.app.ActivityThread$H planTime=1528880126514 dispatchTime=0 finishTime=0 }
+Message 96: { when=-4s803ms what=2 target=android.hardware.display.DisplayManagerGlobal$DisplayListenerDelegate planTime=1528880126520 dispatchTime=0 finishTime=0 }
+Message 97: { when=-4s784ms callback=android.app.LoadedApk$ReceiverDispatcher$Args target=android.app.ActivityThread$H planTime=1528880126539 dispatchTime=0 finishTime=0 }
+Message 98: { when=-4s765ms callback=com.yealink.base.util.RegularTaskUtil$1 target=android.os.Handler planTime=1528880126557 dispatchTime=0 finishTime=0 }
+Message 99: { when=-1s823ms callback=com.yealink.videophone.main.NotifyService$4$1 target=android.os.Handler planTime=1528880129499 dispatchTime=0 finishTime=0 }
+Message 100: { when=+4m28s325ms what=200 target=android.os.Handler planTime=1528880399648 dispatchTime=0 finishTime=0 }
+(Total messages: 101, polling=false, quitting=false)
+-------------------------- END --------------------------
+
+(dump anr info success and took 14ms)

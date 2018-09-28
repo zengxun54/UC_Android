@@ -32,7 +32,7 @@ class callRecordDetailCase(unittest.TestCase):
         call_num_str = self.call_num_str
         result = self.commonCls.call_num(self.driver,call_num_str)
         self.commonCls.result_handler(result,"未进入通话界面")
-    def test_2hang_up(self):#记录通话类型并挂断通话
+    # def test_2hang_up(self):#记录通话类型并挂断通话
         self.driver.find_element_by_id(self.commonCls.debug_id_pre+'name').click()#
         time.sleep(1)
         # com.yealink.uc.android.alpha:id/overlayMenu
@@ -48,12 +48,14 @@ class callRecordDetailCase(unittest.TestCase):
         time.sleep(2)
         iv_call_send = (self.commonCls.debug_id_pre+'tv_recent_calllog_title')
         source = self.driver.page_source
-        try:
-            assert iv_call_send in source
-        except Exception as msg:
-            # print('未进入通话界面！')
-            raise ('通话界面未挂断')
-    def test_3getin_call_record_detail(self):#进入通话记录详情页
+        # try:
+        #     assert iv_call_send in source
+        # except Exception as msg:
+        #     # print('未进入通话界面！')
+        #     raise ('通话界面未挂断')
+        result = iv_call_send in source
+        self.commonCls.result_handler(result,'通话界面未挂断')
+    # def test_3getin_call_record_detail(self):#进入通话记录详情页
         print('test_getin_call_record_detail')
         source = self.driver.page_source
         debug_id_pre = commonClass.debug_id_pre
@@ -72,24 +74,28 @@ class callRecordDetailCase(unittest.TestCase):
         time.sleep(3)
         detail_el = debug_id_pre+'tv_recent_calllog_title'
         detail_source = self.driver.page_source
-        try:
-            assert detail_el not in detail_source
-        except Exception as msg:
-            print('未进入通话记录详情界面！')
-            raise ('未进入通话记录详情界面！')
-    def test_4detail_title(self):#检查通话记录详情标题
+        # try:
+        #     assert detail_el not in detail_source
+        # except Exception as msg:
+        #     print('未进入通话记录详情界面！')
+        #     raise ('未进入通话记录详情界面！')
+        result = detail_el not in detail_source
+        self.commonCls.result_handler(result,'未进入通话记录详情界面')
+    # def test_4detail_title(self):#检查通话记录详情标题
         print('test_detail_title')
         # com.yealink.uc.android.alpha:id/title
         detail_title_ele = self.driver.find_element_by_id(self.commonCls.debug_id_pre+'title')
         detail_title = detail_title_ele.get_attribute('text')
         print('detail_title')
         print(detail_title)
-        try:
-            assert detail_title == '通话详情'
-        except Exception as msg:
-            print('通话详情页标题未显示！')
-            raise ('通话详情页标题未显示！')
-    def test_5detail_call_type(self):#检查通话记录详情最后一路通话的通话类型
+        # try:
+        #     assert detail_title == '通话详情'
+        # except Exception as msg:
+        #     print('通话详情页标题未显示！')
+        #     raise ('通话详情页标题未显示！')
+        result = detail_title == '通话详情'
+        self.commonCls.result_handler(result,'通话详情页标题未显示')
+    # def test_5detail_call_type(self):#检查通话记录详情最后一路通话的通话类型
         print('test_detail_call_type')
         # com.yealink.uc.android.alpha:id/title
         # com.yealink.uc.android.alpha:id/tv_call_protocol
@@ -97,12 +103,14 @@ class callRecordDetailCase(unittest.TestCase):
         detail_call_type = detail_calltype_ele[0].get_attribute('text')
         print('detail_call_type')
         print(detail_call_type)
-        try:
-            assert detail_call_type == self.call_type
-        except Exception as msg:
-            print('通话详情页的通话类型与实际通话类型不符')
-            raise ('通话详情页的通话类型与实际通话类型不符！')
-    def test_6detail_call_num(self):#检查通话记录详情的号码
+        # try:
+        #     assert detail_call_type == self.call_type
+        # except Exception as msg:
+        #     print('通话详情页的通话类型与实际通话类型不符')
+        #     raise ('通话详情页的通话类型与实际通话类型不符！')
+        result = detail_call_type == self.call_type
+        self.commonCls.result_handler(result,'通话详情页的通话类型与实际通话类型不符')
+    # def test_6detail_call_num(self):#检查通话记录详情的号码
         print('test_detail_call_num')
         width = self.driver.get_window_size()['width']
         height = self.driver.get_window_size()['height']
@@ -114,22 +122,12 @@ class callRecordDetailCase(unittest.TestCase):
         detail_callnum_ele = self.driver.find_element_by_id(self.commonCls.debug_id_pre+'item_contact_detail_subtitle')
         detail_call_num = detail_callnum_ele.get_attribute('text')
         print(detail_call_num)
-        try:
-            assert detail_call_num == self.call_num_str
-        except Exception as msg:
-            print('通话详情页的通话号码与实际通话号码不符')
-            raise ('通话详情页的通话号码与实际通话号码不符！')
-    def test_7wait(self):
-        time.sleep(60)
+        result = detail_call_num == self.call_num_str
+        self.commonCls.result_handler(result,'通话详情页的通话号码与实际通话号码不符')
+        # try:
+        #     assert detail_call_num == self.call_num_str
+        # except Exception as msg:
+        #     print('通话详情页的通话号码与实际通话号码不符')
+        #     raise ('通话详情页的通话号码与实际通话号码不符！')
 # if __name__== '__main__':
 #     unittest.main(verbosity=2)
-#     suite = unittest.TestSuite()
-#     # 将测试用例加入到测试容器中
-#     print(suite)
-#     suite.addTests([callRecordDetailCase('test_1call_num'),callRecordDetailCase('test_2hang_up'),callRecordDetailCase('test_3getin_call_record_detail'),callRecordDetailCase('test_4detail_title'),callRecordDetailCase('test_5detail_call_type'),callRecordDetailCase('test_6detail_call_num')])
-#     report_path = r'E:\testresult.html'
-#     fp = open(report_path, "wb")
-#     runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title="自动化测试unittest测试框架报告", description="用例执行情况：")
-#     runner.run(suite)
-#     print('123')
-#     fp.close()

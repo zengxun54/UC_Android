@@ -1,0 +1,3 @@
+echo ÖØÆôÊÖ»ú....
+adb reboot
+pause

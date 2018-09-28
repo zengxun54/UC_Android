@@ -3,6 +3,7 @@ import unittest
 import os,time,xdrlib
 import HTMLTestRunner
 import configparser,xlrd
+from Public import commonClass
 #from Send_email import  main2
 # from Test_case.DialPlate import AudioCallCase
 # from Test_case.IMChat import IM_AudioCall
@@ -13,7 +14,7 @@ def allcase():
     case_dir=r'F:\script\UC_1.0_Android\UC_Android\Test_case\DialPlate'
     # case_path=os.path.join(os.getcwd(),"case")
     testcase = unittest.TestSuite()
-    discover=unittest.defaultTestLoader.discover(case_dir,pattern='*.py',top_level_dir=None)
+    discover=unittest.defaultTestLoader.discover(case_dir,pattern='callBackCase.py',top_level_dir=None)
     # discover=unittest.defaultTestLoader.discover(case_dir,pattern='circleStart.py',top_level_dir=None)
     #discover方法筛选出来的用例，循环添加到测试套件中
     # print(discover)
@@ -24,19 +25,22 @@ def allcase():
     return testcase
     # print(testcase)
 # # def circleRun():
-# def circleRun():
-#     n=1
-#     while n<550:
-#         runner = unittest.TextTestRunner()
-#         runner.run(allcase())
-#         # report_path = r'E:\testresult.html'
-#         # fp = open(report_path,"wb")
-#         # runner = HTMLTestRunner.HTMLTestRunner(stream=fp,title="自动化测试unittest测试框架报告",description="用例执行情况：")
-#         # runner.run(allcase())
-#         # fp.close()
-#         print(time.ctime())
-#         print(n)
-#         n+=1
+def circleRun():
+    n=0
+    commonCls = commonClass.commonCase(commonClass.debug_id_pre)
+    while n<100:
+        # commonCls.restart_adb()
+        runner = unittest.TextTestRunner()
+        runner.run(allcase())
+        # report_path = r'E:\testresult.html'
+        # fp = open(report_path,"wb")
+        # runner = HTMLTestRunner.HTMLTestRunner(stream=fp,title="自动化测试unittest测试框架报告",description="用例执行情况：")
+        # runner.run(allcase())
+        # fp.close()
+        print(time.ctime())
+        print(n)
+        n+=1
+        time.sleep(30)
 # def get_case_from_Excel():
 #     print('get_case_from_Excel')
 #     # test_case =
@@ -56,6 +60,8 @@ def allcase():
 def get_case():
     xlsfile = r"F:\script\UC_1.0_Android\UC_Android\config\testcase.xls"
     case_dir = "F:\\script\\UC_1.0_Android\\UC_Android\\Test_case"
+    report_name = time.strftime("%Y-%m-%d %H-%M-%S", time.localtime())
+    report_path = "F:\\script\\UC_1.0_Android\\UC_Android\\log\\"+report_name+'.html'
     book = xlrd.open_workbook(xlsfile)
     sheet0 = book.sheet_by_index(0)
     nrows = sheet0.nrows
@@ -73,29 +79,18 @@ def get_case():
     for test_suite in discover_arr:
         for test_case in test_suite:
             suite.addTest(test_case)
-    # suite = unittest.TestSuite()
-    # # arr['AudioCallCase'] = AudioCallCase.AudioCallCase
-    # case_dir = r'F:\script\UC-1.0_android'
-    # module = 'DialPlate'
-    # # module2 = 'IMChat'
-    # discover_arr = []
-    # discover=unittest.defaultTestLoader.discover(case_dir+'\\'+module,pattern='*.py',top_level_dir=case_dir)
-    # discover_arr.append(discover)
-    # for discover in discover_arr:
-    #     for test_suite in discover:
-    #         for test_case in test_suite:
-    #             suite.addTest(test_case)
-    #
-    # # if AudioCallCase==Y
-    # #     suite.addTest(AudioCallCase.AudioCallCase("test_1call_num"))
-    # str = IM_AudioCall.AudioCall('test_audiocall')
-    # print(type(str))
-    # suite.addTest(str)
-    # # runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title="自动化测试unittest测试框架报告", description="用例执行情况：")
+    fp = open(report_path,"wb")
+    runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title="自动化测试unittest测试框架报告", description="用例执行情况：")
     # runner = unittest.TextTestRunner()
     runner.run(suite)
+
+def packup_log():
+    commonCls = commonClass.commonCase(commonClass.debug_id_pre)
+    commonCls.packup_log()
 if __name__=="__main__":
-    get_case()
+    # packup_log()
+    # get_case()
+    circleRun()
     # get_case_from_Excel()
     # # runner = unittest.TextTestRunner()
     # # # runner.run(allcase())

@@ -1,0 +1,25 @@
+ANR in com.yealink.videophone
+PID: 31792
+Reason: Broadcast of Intent { act=android.intent.action.EVENT_REMINDER dat=content://com.android.calendar/1530003300000 flg=0x14 cmp=com.yealink.videophone/.meeting.MeetingAlarmReceiver (has extras) }
+ package com.yealink.videophone version Code: 921 version Name: 1.26.254.28 cur loop is : Looper (main, tid 1) {c1fc373}
+Dump time : 2018-06-26 16:56:00.141+0800
+---------- History of long time messages on Looper (main, tid 1) {c1fc373}----------
+-------------------------- END --------------------------
+---------- Dump MessageQueue on Looper (main, tid 1) {c1fc373}----------
+Running message is { when=-1m6s992ms callback=android.view.Choreographer$FrameDisplayEventReceiver target=android.view.Choreographer$FrameHandler planTime=1530003293150 dispatchTime=1530003293151 finishTime=0 }
+Message 0: { when=-1m6s993ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@c28cc2e target=android.os.AsyncTask$InternalHandler planTime=1530003293149 dispatchTime=0 finishTime=0 }
+Message 1: { when=-1m6s979ms callback=android.view.View$UnsetPressedState target=android.view.ViewRootImpl$ViewRootHandler planTime=1530003293163 dispatchTime=0 finishTime=0 }
+Message 2: { when=-1m6s836ms what=3 target=android.view.GestureDetector$GestureHandler planTime=1530003293306 dispatchTime=0 finishTime=0 }
+Message 3: { when=-1m5s495ms callback=com.squareup.leakcanary.AndroidWatchExecutor$1 target=android.os.Handler planTime=1530003294647 dispatchTime=0 finishTime=0 }
+Message 4: { when=-1m3s60ms what=1 obj=android.os.AsyncTask$AsyncTaskResult@c87815c target=android.os.AsyncTask$InternalHandler planTime=1530003297082 dispatchTime=0 finishTime=0 }
+Message 5: { when=-60s98ms callback=com.yealink.videophone.main.NotifyService$4$1 target=android.os.Handler planTime=1530003300044 dispatchTime=0 finishTime=0 }
+Message 6: { when=-60s98ms callback=com.yealink.videophone.main.MainActivity$2$1 target=android.os.Handler planTime=1530003300044 dispatchTime=0 finishTime=0 }
+Message 7: { when=-60s36ms what=113 obj=ReceiverData{intent=Intent { act=android.intent.action.EVENT_REMINDER dat=content://com.android.calendar/1530003300000 flg=0x14 cmp=com.yealink.videophone/.meeting.MeetingAlarmReceiver (has extras) } packageName=com.yealink.videophone resultCode=0 resultData=null resultExtras=null} target=android.app.ActivityThread$H planTime=1530003300106 dispatchTime=0 finishTime=0 }
+Message 8: { when=-8s360ms callback=android.app.LoadedApk$ReceiverDispatcher$Args target=android.app.ActivityThread$H planTime=1530003351782 dispatchTime=0 finishTime=0 }
+Message 9: { when=-8s344ms callback=android.app.LoadedApk$ReceiverDispatcher$Args target=android.app.ActivityThread$H planTime=1530003351798 dispatchTime=0 finishTime=0 }
+Message 10: { when=-118ms callback=android.database.ContentObserver$NotificationRunnable target=android.os.Handler planTime=1530003360024 dispatchTime=0 finishTime=0 }
+Message 11: { when=+3m59s421ms what=200 target=android.os.Handler planTime=1530003599563 dispatchTime=0 finishTime=0 }
+(Total messages: 12, polling=false, quitting=false)
+-------------------------- END --------------------------
+
+(dump anr info success and took 13ms)

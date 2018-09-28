@@ -1,0 +1,16 @@
+ANR in com.miui.core
+PID: 3559
+Reason: executing service com.miui.core/com.miui.internal.server.CoreService
+ package com.miui.core version Code: 0 version Name: null cur loop is : Looper (main, tid 1) {357123d}
+Dump time : 2018-09-28 19:30:02.806+0800
+---------- History of long time messages on Looper (main, tid 1) {357123d}----------
+-------------------------- END --------------------------
+---------- Dump MessageQueue on Looper (main, tid 1) {357123d}----------
+Running message is { when=-20s626ms what=110 obj=AppBindData{appInfo=ApplicationInfo{fa4d794 com.miui.core}} target=android.app.ActivityThread$H planTime=1538134182181 dispatchTime=1538134190848 finishTime=0 }
+Message 0: { when=-20s240ms what=140 arg1=10 target=android.app.ActivityThread$H planTime=1538134182567 dispatchTime=0 finishTime=0 }
+Message 1: { when=-20s240ms what=114 obj=CreateServiceData{token=android.os.BinderProxy@bcf8a32 className=com.miui.internal.server.CoreService packageName=com.miui.core intent=null} target=android.app.ActivityThread$H planTime=1538134182567 dispatchTime=0 finishTime=0 }
+Message 2: { when=-20s239ms what=121 obj=BindServiceData{token=android.os.BinderProxy@bcf8a32 intent=Intent { act=com.miui.internal.action.BIND_SERVICE pkg=com.miui.core (has extras) }} target=android.app.ActivityThread$H planTime=1538134182568 dispatchTime=0 finishTime=0 }
+(Total messages: 3, polling=false, quitting=false)
+-------------------------- END --------------------------
+
+(dump anr info success and took 1ms)

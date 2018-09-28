@@ -1,0 +1,27 @@
+ANR in com.yealink.uc.android.alpha
+PID: 1482
+Reason: Broadcast of Intent { act=com.xiaomi.mipush.RECEIVE_MESSAGE flg=0x10 pkg=com.yealink.uc.android.alpha cmp=com.yealink.uc.android.alpha/com.yealink.ylpush.YLXiMiReceiver (has extras) }
+ package com.yealink.uc.android.alpha version Code: 964 version Name: 1.0.288.964 cur loop is : Looper (main, tid 1) {c3218b9}
+Dump time : 2018-06-19 11:50:41.530+0800
+---------- History of long time messages on Looper (main, tid 1) {c3218b9}----------
+-------------------------- END --------------------------
+---------- Dump MessageQueue on Looper (main, tid 1) {c3218b9}----------
+Running message is { when=-1m5s544ms callback=android.view.View$PerformClick target=android.view.ViewRootImpl$ViewRootHandler planTime=1529380175986 dispatchTime=1529380175986 finishTime=0 }
+Message 0: { when=-1m5s545ms callback=android.view.View$UnsetPressedState target=android.view.ViewRootImpl$ViewRootHandler planTime=1529380175986 dispatchTime=0 finishTime=0 }
+Message 1: { when=-1m5s540ms barrier=62 }
+Message 2: { when=-1m5s312ms what=3 target=android.view.GestureDetector$GestureHandler planTime=1529380176219 dispatchTime=0 finishTime=0 }
+Message 3: { when=-60s360ms callback=com.yealink.uc.android.message.adapter.SessionDataLoader$1$3 target=android.os.Handler planTime=1529380181171 dispatchTime=0 finishTime=0 }
+Message 4: { when=-60s51ms what=113 obj=ReceiverData{intent=Intent { act=com.xiaomi.mipush.RECEIVE_MESSAGE flg=0x10 pkg=com.yealink.uc.android.alpha cmp=com.yealink.uc.android.alpha/com.yealink.ylpush.YLXiMiReceiver (has extras) } packageName=com.yealink.uc.android.alpha resultCode=-1 resultData=null resultExtras=null} target=android.app.ActivityThread$H planTime=1529380181480 dispatchTime=0 finishTime=0 }
+Message 5: { when=-54s536ms callback=com.yealink.uc.android.message.adapter.SessionDataLoader$1$3 target=android.os.Handler planTime=1529380186995 dispatchTime=0 finishTime=0 }
+Message 6: { when=-52s734ms callback=com.yealink.uc.android.message.adapter.SessionDataLoader$1$3 target=android.os.Handler planTime=1529380188797 dispatchTime=0 finishTime=0 }
+Message 7: { when=-34s287ms callback=com.yealink.uc.android.message.adapter.SessionDataLoader$1$3 target=android.os.Handler planTime=1529380207244 dispatchTime=0 finishTime=0 }
+Message 8: { when=-28s651ms callback=com.yealink.uc.android.message.adapter.SessionDataLoader$1$3 target=android.os.Handler planTime=1529380212880 dispatchTime=0 finishTime=0 }
+Message 9: { when=-18s354ms callback=com.yealink.uc.android.message.adapter.SessionDataLoader$1$3 target=android.os.Handler planTime=1529380223177 dispatchTime=0 finishTime=0 }
+Message 10: { when=-13s736ms callback=com.yealink.uc.android.message.adapter.SessionDataLoader$1$3 target=android.os.Handler planTime=1529380227795 dispatchTime=0 finishTime=0 }
+Message 11: { when=-44ms what=113 obj=ReceiverData{intent=Intent { act=com.xiaomi.mipush.RECEIVE_MESSAGE flg=0x10 pkg=com.yealink.uc.android.alpha cmp=com.yealink.uc.android.alpha/com.yealink.ylpush.YLXiMiReceiver (has extras) } packageName=com.yealink.uc.android.alpha resultCode=-1 resultData=null resultExtras=null} target=android.app.ActivityThread$H planTime=1529380241487 dispatchTime=0 finishTime=0 }
+Message 12: { when=+1d22h4m18s626ms what=200 target=android.os.Handler planTime=1529546100157 dispatchTime=0 finishTime=0 }
+Message 13: { when=+1d22h9m18s626ms what=201 target=android.os.Handler planTime=1529546400157 dispatchTime=0 finishTime=0 }
+(Total messages: 14, polling=false, quitting=false)
+-------------------------- END --------------------------
+
+(dump anr info success and took 1ms)
