@@ -12,13 +12,13 @@ import re
 class callRecordDetailCase(unittest.TestCase):
     @classmethod
     def setUpClass(self):
-        debug_id_pre = 'com.yealink.uc.android.alpha:id/'
-        self.commonCls = commonClass.commonCase(debug_id_pre)
+        # debug_id_pre = 'com.yealink.uc.android.alpha:id/'
+        self.commonCls = commonClass.commonCase(commonClass.debug_id_pre)
         self.call_num_str = '4001'
         self.call_type = '[视频通话]'
         print('callRecordDetailCase setup')
         desired_cups = {}
-        print('setup')
+        # print('setup')
         # debug_id_pre = 'com.yealink.uc.android.alpha:id/'
         self.commonCls = commonClass.commonCase(commonClass.debug_id_pre)
         self.driver = self.commonCls.startUpApp()
@@ -121,8 +121,8 @@ class callRecordDetailCase(unittest.TestCase):
             raise ('通话详情页的通话号码与实际通话号码不符！')
     def test_7wait(self):
         time.sleep(60)
-if __name__== '__main__':
-    unittest.main(verbosity=2)
+# if __name__== '__main__':
+#     unittest.main(verbosity=2)
 #     suite = unittest.TestSuite()
 #     # 将测试用例加入到测试容器中
 #     print(suite)

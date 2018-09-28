@@ -13,7 +13,7 @@ calllog_first_count = None
 class callRecordCase(unittest.TestCase):
     @classmethod
     def setUpClass(self):
-        print('setup')
+        print('callRecordCase setup')
         self.call_num_str = '4001'
         # debug_id_pre = 'com.yealink.uc.android.alpha:id/'
         self.commonCls = commonClass.commonCase(commonClass.debug_id_pre)
@@ -89,8 +89,8 @@ class callRecordCase(unittest.TestCase):
             raise ('通话记录数显示不正确')
     def test_5wait(self):
         time.sleep(60)
-if __name__== '__main__':
-    unittest.main(verbosity=2)
+# if __name__== '__main__':
+#     unittest.main(verbosity=2)
 #     suite = unittest.TestSuite()
 #     # 将测试用例加入到测试容器中
 #     print(suite)

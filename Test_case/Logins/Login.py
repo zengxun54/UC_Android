@@ -25,46 +25,46 @@ class Login(unittest.TestCase):
         # pass
 
     # @unittest.skip("demonstrating skipping")
-    def test_first_install_welcome(self):
-        '''
-        首次安装进入的是引导页
-
-        '''
-        #等待欢迎页面出现
-        self.driver.wait_activity('com.yealink.uc.android.login.WelcomeActivity',2,2)
-        #向右滑动3张引导图
-        self.config_factory.swipeToRight(self.driver,200,3)
-        # 点击立即体验按钮
-        self.config_factory.find_element_id(self.driver,Const.EXPETIENCE).click()
-
-    def test_login_checkui(self):
-        '''
-            正常用例：校验ui
-            检查点：页面元素，值
-        '''
-        self.driver.wait_activity("com.yealink.uc.android.login.LoginActivity",2,2)
-        #用户名
-        username=self.config_factory.find_element_id(self.driver,Const.USERNAME).text
-        #密码
-        password=self.config_factory.find_element_id(self.driver,Const.PASSWORD).text
-        #服务器
-        server=self.config_factory.find_element_id(self.driver,Const.SERVER).text
-        #记住密码
-        ckb_remember_psw=self.config_factory.find_element_id(self.driver,Const.REMENBERPASSWORD).get_attribute("checked")
-
-        #忘记密码
-        # forgetpassword=self.config_factory.find_element_id(self.driver,Const.FORGETPASSWORD).text
-        #意见反馈
-        feedback=self.config_factory.find_element_id(self.driver,Const.FEEDBACK).text
-        #校验默认值
-        self.assertEqual(username,"",msg="用户名输入框默认值不对")
-        self.assertEqual(password,"",msg="密码默认值不对")
-        self.assertEqual(server,"ume.yealink.com",msg="服务器默认值不对")
-        self.assertTrue(ckb_remember_psw, msg="默认选中状态不对")
-        # self.assertEqual(forgetpassword,"忘记密码",msg="忘记密码文案错误")
-        self.assertEqual(feedback,"意见反馈",msg="意见反馈文案错误")
-        # self.assertTrue(self.config_factory.find_element_id(self.driver,Const.FORGETPASSWORD).get_attribute("Clickable"),"忘记密码不能点击")
-        self.assertTrue(self.config_factory.find_element_id(self.driver,Const.FEEDBACK).get_attribute("Clickable"),"意见反馈不能点击")
+    # def test_first_install_welcome(self):
+    #     '''
+    #     首次安装进入的是引导页
+    #
+    #     '''
+    #     #等待欢迎页面出现
+    #     self.driver.wait_activity('com.yealink.uc.android.login.WelcomeActivity',2,2)
+    #     #向右滑动3张引导图
+    #     self.config_factory.swipeToRight(self.driver,200,3)
+    #     # 点击立即体验按钮
+    #     self.config_factory.find_element_id(self.driver,Const.EXPETIENCE).click()
+    #
+    # def test_login_checkui(self):
+    #     '''
+    #         正常用例：校验ui
+    #         检查点：页面元素，值
+    #     '''
+    #     self.driver.wait_activity("com.yealink.uc.android.login.LoginActivity",2,2)
+    #     #用户名
+    #     username=self.config_factory.find_element_id(self.driver,Const.USERNAME).text
+    #     #密码
+    #     password=self.config_factory.find_element_id(self.driver,Const.PASSWORD).text
+    #     #服务器
+    #     server=self.config_factory.find_element_id(self.driver,Const.SERVER).text
+    #     #记住密码
+    #     ckb_remember_psw=self.config_factory.find_element_id(self.driver,Const.REMENBERPASSWORD).get_attribute("checked")
+    #
+    #     #忘记密码
+    #     # forgetpassword=self.config_factory.find_element_id(self.driver,Const.FORGETPASSWORD).text
+    #     #意见反馈
+    #     feedback=self.config_factory.find_element_id(self.driver,Const.FEEDBACK).text
+    #     #校验默认值
+    #     self.assertEqual(username,"",msg="用户名输入框默认值不对")
+    #     self.assertEqual(password,"",msg="密码默认值不对")
+    #     self.assertEqual(server,"ume.yealink.com",msg="服务器默认值不对")
+    #     self.assertTrue(ckb_remember_psw, msg="默认选中状态不对")
+    #     # self.assertEqual(forgetpassword,"忘记密码",msg="忘记密码文案错误")
+    #     self.assertEqual(feedback,"意见反馈",msg="意见反馈文案错误")
+    #     # self.assertTrue(self.config_factory.find_element_id(self.driver,Const.FORGETPASSWORD).get_attribute("Clickable"),"忘记密码不能点击")
+    #     self.assertTrue(self.config_factory.find_element_id(self.driver,Const.FEEDBACK).get_attribute("Clickable"),"意见反馈不能点击")
 
     # def test_login_errorhost(self):
     #     '''
