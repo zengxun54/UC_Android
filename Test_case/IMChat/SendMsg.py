@@ -24,7 +24,7 @@ class SendMsg (unittest.TestCase):
         time.sleep(20)
         print('test_sendimage')
         conf = configparser.ConfigParser()
-        conf.read ("../../config/parameters.ini",encoding='utf-8')
+        conf.read ("config/parameters.ini",encoding='utf-8')
         username=conf.get ("单人聊天", "单人聊天用户")
         self.driver.find_element_by_name(username).click ()  # 进入和某人的IM聊天界面
         time.sleep(5)
@@ -33,7 +33,7 @@ class SendMsg (unittest.TestCase):
         self.driver.find_element_by_xpath (conf.get ("单人聊天", "笑脸")).click()#点击笑脸表情、
         time.sleep (2)
         self.driver.find_element_by_id (conf.get ("单人聊天", "发送")).click ()#点击发送
-        name1 = self.driver.find_element_by_id ('com.yealink.uc.android:id/chat_bar_editor').text
+        name1 = self.driver.find_element_by_id (commonClass.debug_id_pre+'chat_bar_editor').text
         try:
             self.assertEqual (name1, u'')
         except Exception as msg:
@@ -43,14 +43,14 @@ class SendMsg (unittest.TestCase):
         print('test_sendmsg')
         time.sleep(5)
         conf = configparser.ConfigParser()
-        conf.read ("../config/parameters.ini",encoding='utf-8')
+        conf.read (commonClass.param_url,encoding='utf-8')
         abc='Test msg'
         # username=conf.get ("单人聊天", "单人聊天用户")
         # self.driver.find_element_by_name(username).click()#进入和某人的IM聊天界面
         self.driver.find_element_by_id(conf.get ("单人聊天", "文本输入框")).send_keys(abc)#在文本输入框输入需要发送的文本
         self.driver.find_element_by_id (conf.get ("单人聊天", "发送")).click()#点击发送
 
-        name1 = self.driver.find_element_by_id ('com.yealink.uc.android:id/chat_bar_editor').text
+        name1 = self.driver.find_element_by_id (commonClass.debug_id_pre+'chat_bar_editor').text
         try:
             self.assertEqual (name1, u'')
         except Exception as msg:
@@ -61,7 +61,7 @@ class SendMsg (unittest.TestCase):
         print('test_status')
         time.sleep(5)
         source = self.driver.page_source
-        status=('com.yealink.uc.android.alpha:id/record_status')
+        status=(commonClass.debug_id_pre+'record_status')
         try:
             assert status  not in source
         except Exception as msg:
@@ -69,7 +69,7 @@ class SendMsg (unittest.TestCase):
             raise('发送失败！')
     def test_send_msg_wait(self):
         time.sleep(60)
-# if __name__== '__main__':
-#     unittest.main ()
+if __name__== '__main__':
+    unittest.main ()
 
 

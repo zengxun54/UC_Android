@@ -9,15 +9,15 @@ import HTMLTestRunner
 import traceback
 import re
 
-class callRecordCase(unittest.TestCase):
+class callBackCase(unittest.TestCase):
     @classmethod
     def setUpClass(self):
-        print('setup')
+        print('callBackCase setup')
         # debug_id_pre = 'com.yealink.uc.android.alpha:id/'
         self.commonCls = commonClass.commonCase(commonClass.debug_id_pre)
         self.driver = self.commonCls.startUpApp()
         self.paramter = self.commonCls.paramter
-        self.first_calllog_type  = '[视频通话]'
+        self.first_calllog_type = '[视频通话]'
         # 启动app时，需要一定时间进入引导页，所以必须设置等待时间，不然下面会一直报错定位不到元素
         # time.sleep(20)
     @classmethod
@@ -25,17 +25,18 @@ class callRecordCase(unittest.TestCase):
         print('tearDown')
         #@通话记录回拨
     def test_1calllog_back(self):
+        print('test_1calllog_back')
         time.sleep(5)
         self.driver.find_element_by_xpath("//android.widget.TextView[@text='拨号']").click()
         time.sleep(1)
         source = self.driver.page_source
-        el = ('com.yealink.uc.android.alpha:id/iv_call_send')
+        el = (commonClass.debug_id_pre+'iv_call_send')
         # 拨号界面如果有拨号键，再次点击拨号页签按钮
         if el in source:
             iv_call_send = self.driver.find_elements_by_id(self.commonCls.debug_id_pre+'tab_text')[2].click()
             time.sleep(1)
         time.sleep(3)
-        call_log_none_el = 'com.yealink.uc.android.alpha:id/tv_none'
+        call_log_none_el = commonClass.debug_id_pre+'tv_none'
         try:
             assert call_log_none_el not in source
         except Exception as msg:
@@ -50,13 +51,16 @@ class callRecordCase(unittest.TestCase):
         calllog_set[1].click()
         print(len(calllog_set))
         time.sleep(3)
-        el=('com.yealink.uc.android.alpha:id/name')
+        el=(commonClass.debug_id_pre+'name')
         try:
             assert el not in source
         except Exception as msg:
             print('通话记录回拨失败！')
             raise ('未进入通话界面')
     def test_2check_call_type(self):
+        time.sleep(3)
+        self.driver.find_element_by_id(commonClass.debug_id_pre+'name').click()#通话界面图标
+        print('test_2check_call_type')
         debug_id_pre = commonClass.debug_id_pre
         source = self.driver.page_source
         print(self.first_calllog_type)
@@ -72,6 +76,7 @@ class callRecordCase(unittest.TestCase):
             print(self.first_calllog_type+'界面没有！'+button)
             raise ('未进入通话界面')
     def test_3hang_up(self):#挂断通话
+        print('test_2check_call_type')
         self.commonCls.hang_up(self.driver)
         time.sleep(2)
         iv_call_send = (self.commonCls.debug_id_pre+'tv_recent_calllog_title')
@@ -83,8 +88,8 @@ class callRecordCase(unittest.TestCase):
             raise ('通话界面未挂断')
     def test_4wait(self):
         time.sleep(60)
-if __name__== '__main__':
-    unittest.main(verbosity=2)
+# if __name__== '__main__':
+#     unittest.main(verbosity=2)
     # suite = unittest.TestSuite()
     # # 将测试用例加入到测试容器中
     # # print(suite)

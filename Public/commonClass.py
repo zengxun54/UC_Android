@@ -5,13 +5,23 @@ import os
 import time,configparser
 import re
 debug_id_pre = 'com.yealink.uc.android:id/'
+# conf_url = "../../config/config.ini"#单个运行
+# param_url = "../../config/parameters.ini"#单个运行
+conf_url = "config/config.ini"#单个运行
+param_url = "config/parameters.ini"#单个运行
 class commonCase(unittest.TestCase):
     def __init__(self,debug_id_pre):
         self.debug_id_pre = debug_id_pre
         self.conf = configparser.ConfigParser()
-        self.conf.read("../../config/config.ini",encoding='utf-8')
+        # conf_url = "../../config/config.ini"#单个运行
+        # param_url = "../../config/config.ini"#单个运行
+        # conf_url = "config/config.ini"#全部运行
+        # param_url = "config/config.ini"#全部运行
+        self.conf.read(conf_url,encoding='utf-8')#单个运行
+        # self.conf.read("config/config.ini",encoding='utf-8')#全部运行
         self.paramter = configparser.ConfigParser()
-        self.paramter.read("../../config/parameters.ini",encoding='utf-8')
+        self.paramter.read(param_url,encoding='utf-8')#单个运行
+        # self.paramter.read("config/parameters.ini",encoding='utf-8')#全部运行
     def startUpApp(self):
         desired_cups = {}
         # 设备平台 case_dir = conf.get("测试用例路径", "用例路径")
@@ -140,3 +150,12 @@ class commonCase(unittest.TestCase):
     def get_conf(self,option,value):
         paramter = self.debug_id_pre+self.paramter.get(option,value)
         return paramter
+    def restart_adb(self):
+        kill_adb_cmd = 'adb kill-server'
+        start_adb_cmd = 'adb start-server'
+        # os.chdir(retval+module_dir)
+        # time.sleep(10)
+        if not (os.system(kill_adb_cmd)==0):
+            os.system(start_adb_cmd)#不成功就启动
+        print('success')
+        os.system(start_adb_cmd)#成功就启动

@@ -11,7 +11,7 @@ import traceback
 class VideoCallCase(unittest.TestCase):
     @classmethod
     def setUpClass(self):
-        print('setup')
+        print('VideoCallCase setup')
         # debug_id_pre = 'com.yealink.uc.android.alpha:id/'
         self.commonCls = commonClass.commonCase(commonClass.debug_id_pre)
         self.driver = self.commonCls.startUpApp()
@@ -20,8 +20,9 @@ class VideoCallCase(unittest.TestCase):
         # time.sleep(20)
     @classmethod
     def tearDownClass(self):
+        self.commonCls = commonClass.commonCase(commonClass.debug_id_pre)
+        self.commonCls.restart_adb()
         print('tearDown')
-        # pass
     # @unittest.skip("demonstrating skipping")
     def test_1call_num(self):#拨号用例
         # print('13')
@@ -68,8 +69,8 @@ class VideoCallCase(unittest.TestCase):
             raise ('通话界面未挂断')
     def test_4wait(self):
         time.sleep(60)
-if __name__ == '__main__':
-    unittest.main(verbosity=2)
+# if __name__ == '__main__':
+#     unittest.main(verbosity=2)
     # suite = unittest.TestSuite()
     # # 将测试用例加入到测试容器中
     # print(suite)
