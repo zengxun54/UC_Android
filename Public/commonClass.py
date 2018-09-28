@@ -156,6 +156,6 @@ class commonCase(unittest.TestCase):
         # os.chdir(retval+module_dir)
         # time.sleep(10)
         if not (os.system(kill_adb_cmd)==0):
-            os.system(start_adb_cmd)#不成功就启动
+            os.system(kill_adb_cmd)#不成功就启动
         print('success')
-        os.system(start_adb_cmd)#成功就启动
+        # os.system(start_adb_cmd)#成功就启动
