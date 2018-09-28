@@ -25,7 +25,8 @@ class Login (unittest.TestCase):
         time.sleep (10)
 
     def tearDown(self):
-        pass
+        self.driver.find_element_by_id('com.yealink.uc.android:id/btn_login').click()
+
 
     def test_logout(self):
         conf = configparser.ConfigParser ()
