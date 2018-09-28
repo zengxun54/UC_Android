@@ -46,10 +46,10 @@ class publicMethod(unittest.TestCase):
     #获取当前登录的用户名
     def get_username(self):
         try:
-            self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/iv_head').click()
+            self.driver.find_element_by_id(packageName + 'iv_head').click()
             time.sleep(1)
-            username = self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/user_name').text
-            self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/left_btn').click()
+            username = self.driver.find_element_by_id(packageName + 'user_name').text
+            self.driver.find_element_by_id(packageName + 'left_btn').click()
             time.sleep(1)
             return username
         except:
@@ -59,18 +59,18 @@ class publicMethod(unittest.TestCase):
     #打开一个讨论组IM界面
     def open_discussionIm(self):
         #进入联系人-讨论组列表选择一个讨论组
-        self.driver.find_element_by_xpath("//android.widget.LinearLayout[@resource-id='com.yealink.uc.android.alpha:id/tabStrip']/android.widget.LinearLayout[1]/android.widget.RelativeLayout[2]/android.widget.ImageView[1]").click()
+        self.driver.find_element_by_xpath("//android.widget.LinearLayout[@resource-id='"+packageName+"tabStrip']/android.widget.LinearLayout[1]/android.widget.RelativeLayout[2]/android.widget.ImageView[1]").click()
         time.sleep(1)
-        self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/contact_my_groups').click()
+        self.driver.find_element_by_id(packageName + 'contact_my_groups').click()
         time.sleep(1)
         self.driver.find_element_by_xpath("//android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[2]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.TextView[2]").click()
         time.sleep(1)
-        self.driver.find_element_by_xpath("//android.widget.ListView[@resource-id='com.yealink.uc.android.alpha:id/expandable_list']/android.widget.RelativeLayout[1]").click()
+        self.driver.find_element_by_xpath("//android.widget.ListView[@resource-id='"+packageName+"expandable_list']/android.widget.RelativeLayout[1]").click()
         time.sleep(2)
 
         #正常打开讨论组IM界面
         try:
-            self.assertIsNotNone(self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/chat_bar_editor'))
+            self.assertIsNotNone(self.driver.find_element_by_id(packageName + 'chat_bar_editor'))
             print("打开讨论组IM成功")
             return self.driver
         except AssertionError as e:
@@ -81,12 +81,12 @@ class publicMethod(unittest.TestCase):
     # def shuaping(self):
     #     for i in range(1, 10):
     #         number = random.randint(0, 1000)
-    #         self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/chat_bar_editor').clear()
+    #         self.driver.find_element_by_id(packageName + 'chat_bar_editor').clear()
     #         time.sleep(1)
-    #         self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/chat_bar_editor').send_keys("刷屏!%s" % number)
+    #         self.driver.find_element_by_id(packageName + 'chat_bar_editor').send_keys("刷屏!%s" % number)
     #         time.sleep(1)
     #         #self.driver.find_element_by_android_uiautomator('new UiSelector().text(\"发送\"').click()
-    #         self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/send').click()
+    #         self.driver.find_element_by_id(packageName + 'send').click()
     #         time.sleep(1)
     #         i += 1
 
@@ -94,10 +94,10 @@ class publicMethod(unittest.TestCase):
     def open_discussionSetting(self):
         self.driver = publicMethod.open_discussionIm(self)
         #进入设置界面
-        self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/action_setting').click()
+        self.driver.find_element_by_id(packageName + 'action_setting').click()
         time.sleep(2)
         try:
-            self.assertIsNotNone(self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/discussion_chat_setting_icon'))
+            self.assertIsNotNone(self.driver.find_element_by_id(packageName + 'discussion_chat_setting_icon'))
             print("打开讨论组设置界面成功")
         except AssertionError as e:
             AssertionError("打开讨论组设置界面失败")
