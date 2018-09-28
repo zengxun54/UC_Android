@@ -54,6 +54,7 @@ class Testtalk(unittest.TestCase):
         name1 = random.randint(0,100)
         name2 = 'liujxtalk'+ str(name1)
         self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/edit_group_name').send_keys(name2)
+        self.driver.hide_keyboard()
         time.sleep(5)
         self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/btn_next').click()
         time.sleep(2)
@@ -73,11 +74,12 @@ class Testtalk(unittest.TestCase):
             print('创建群失败')
             saveScreenshot.saveScreenshot(self.driver, "创建群失败")
         self.driver.find_element_by_id("com.yealink.uc.android.alpha:id/chat_bar_editor").send_keys('@')
+        self.driver.hide_keyboard()
         #print('输入@')
         time.sleep(3)
         # 增加断言判断检查设置页面是否有展示出来
         shead = self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/tv_all_member').text
-        print(shead)
+        #print(shead)
         try:
             self.assertEqual(shead,'全体成员')
             print('@页面展示成功')

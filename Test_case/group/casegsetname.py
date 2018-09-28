@@ -48,12 +48,14 @@ class TestGsetName(unittest.TestCase):
         name1 = random.randint(0, 100)
         name2 = 'liujxsetname' + str(name1)
         self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/edit_group_name').send_keys(name2)
+        self.driver.hide_keyboard()
         time.sleep(2)
         # self.driver.hide_keyboard()
         time.sleep(5)
         self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/btn_next').click()
         time.sleep(2)
         self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/contact_search').send_keys('liaozz')
+        self.driver.hide_keyboard()
         time.sleep(4)
         self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/contact_icon').click()
         time.sleep(2)
@@ -78,6 +80,7 @@ class TestGsetName(unittest.TestCase):
             AssertionError:('编辑名称页面展示失败')
         #oldname = self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/personal_detail_edit').text
         self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/personal_detail_edit').send_keys('newliujx1')
+        self.driver.hide_keyboard()
         self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/btn_confirm').click()
         time.sleep(2)
         #校验下是否修改成功

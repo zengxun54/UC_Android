@@ -45,6 +45,7 @@ class Testsearchgroup(unittest.TestCase):
         search = self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/edit')
         page="liujx"
         search.send_keys(page)
+        self.driver.hide_keyboard()
         time.sleep(3)
         #尝试获取搜索结果第一行的群名称
         list1=self.driver.find_element_by_xpath('//android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.ListView[1]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.TextView[1]')
