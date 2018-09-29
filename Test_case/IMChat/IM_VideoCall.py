@@ -24,13 +24,13 @@ class VideoCall (unittest.TestCase):
         # # time.sleep (2)
         # # self.driver.find_element_by_id ('com.yealink.uc.android.alpha:id/btnCancel').click ()  # 结束会议
 
-    def test_audiocall(self):
+    def test_1audiocall(self):
         time.sleep(3)
         conf = configparser.ConfigParser ()
         conf.read (commonClass.param_url, encoding='utf-8')
         username=conf.get ("单人聊天", "单人聊天用户")
         self.driver.find_element_by_name(username).click()#进入和某人的IM聊天界面
-        time.sleep (5)
+        time.sleep(5)
         self.driver.find_element_by_id(conf.get("单人聊天","加号更多")).click()#点击加号图标 
         self.driver.find_element_by_id (conf.get("单人聊天", "视频通话")).click()#点击音频通话图标
         time.sleep(10)
@@ -42,7 +42,7 @@ class VideoCall (unittest.TestCase):
         except Exception as msg:
             print ('未进入通话界面！')
             raise
-    # def test_b_call_statistics(self):
+    def test_2b_call_statistics(self):
         time.sleep(3)
         conf = configparser.ConfigParser ()
         conf.read (commonClass.param_url, encoding='utf-8')
@@ -61,8 +61,6 @@ class VideoCall (unittest.TestCase):
         except Exception as msg:
             print ('通话数据异常！')
             raise
-#     def  test_video_call_wait(self):
-#         time.sleep(60)
 # if __name__ == '__main__':
 #     unittest.main()
 

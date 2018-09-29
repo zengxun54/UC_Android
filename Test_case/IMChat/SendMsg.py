@@ -20,7 +20,7 @@ class SendMsg (unittest.TestCase):
         pass
         # self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/left_btn').click()#返回最近会话列表
 
-    def test_sendimage(self):
+    def test_1sendimage(self):
         time.sleep(20)
         print('test_sendimage')
         conf = configparser.ConfigParser()
@@ -39,7 +39,7 @@ class SendMsg (unittest.TestCase):
         except Exception as msg:
             print("表情未发送")
             raise('表情未发送')
-    def test_sendmsg(self):
+    def test_2sendmsg(self):
         print('test_sendmsg')
         time.sleep(5)
         conf = configparser.ConfigParser()
@@ -57,7 +57,7 @@ class SendMsg (unittest.TestCase):
             print ("消息未发送")
             raise ('消息未发送')
 
-    def test_status(self):
+    def test_3status(self):
         print('test_status')
         time.sleep(5)
         source = self.driver.page_source
@@ -67,8 +67,6 @@ class SendMsg (unittest.TestCase):
         except Exception as msg:
             print('发送失败！')
             raise('发送失败！')
-#     def test_send_msg_wait(self):
-#         time.sleep(60)
 # if __name__== '__main__':
 #     unittest.main ()
 

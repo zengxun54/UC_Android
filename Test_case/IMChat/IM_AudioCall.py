@@ -21,7 +21,7 @@ class AudioCall (unittest.TestCase):
         self.commonCls.restart_adb()
         print('tearDown')
         # debug_id_pre = commonClass.debug_id_pre
-    def test_audiocall(self):
+    def test_1audiocall(self):
         print('test_audiocall')
         time.sleep(5)
         debug_id_pre = commonClass.debug_id_pre
@@ -34,20 +34,22 @@ class AudioCall (unittest.TestCase):
         print('test username')
 
         self.driver.find_element_by_name(username).click()#进入和某人的IM聊天界面
-        time.sleep(1)
+        time.sleep(5)
         self.driver.find_element_by_id(conf.get ("单人聊天", "加号更多")).click()#点击加号图标
-        time.sleep(1)
+        time.sleep(5)
         self.driver.find_element_by_id (conf.get ("单人聊天", "音频通话")).click()#点击音频通话图标
         time.sleep(5)
         source = self.driver.page_source
         print (source)
         el=debug_id_pre+'hangup'
-        try:
-            assert el in source
-        except Exception as msg:
-            print ('未进入通话界面！')
-            raise
-    # def test_call_statistics(self):
+        # try:
+        #     assert el in source
+        # except Exception as msg:
+        #     print ('未进入通话界面！')
+        #     raise
+        result = el in source
+        self.commonCls.result_handler(self.driver,result,'通话界面未挂断！')
+    def test_2call_statistics(self):
         print('test_call_statistics')
         debug_id_pre = commonClass.debug_id_pre
         conf = configparser.ConfigParser ()
@@ -62,11 +64,7 @@ class AudioCall (unittest.TestCase):
 
         except Exception as msg:
             print ('通话数据异常！')
-            self.driver.find_element_by_id(debug_id_pre+'hangup').click()#点击挂断图标
             raise
-        self.driver.find_element_by_id(debug_id_pre+'hangup').click()#点击挂断图标
-    # def test_Audio_wait(self):
-    #     time.sleep(60)
 # if __name__ == '__main__':
 #     unittest.main()
 

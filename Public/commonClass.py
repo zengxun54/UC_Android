@@ -4,26 +4,29 @@ from appium import webdriver
 import os
 import time,configparser
 import re
+import logging
 from subprocess import Popen
-debug_id_pre = 'com.yealink.uc.android:id/'
+debug_id_pre = 'com.yealink.uc.android.alpha:id/'
 # conf_url = "../../config/config.ini"#单个运行
 # param_url = "../../config/parameters.ini"#单个运行
 conf_url = "config/config.ini"#批量运行
 param_url = "config/parameters.ini"#批量运行
+
+
 class commonCase(unittest.TestCase):
     def __init__(self,debug_id_pre):
         self.debug_id_pre = debug_id_pre
         self.conf = configparser.ConfigParser()
-        # conf_url = "../../config/config.ini"#单个运行
-        # param_url = "../../config/config.ini"#单个运行
-        # conf_url = "config/config.ini"#全部运行
-        # param_url = "config/config.ini"#全部运行
-        self.conf.read(conf_url,encoding='utf-8')#单个运行
-        # self.conf.read("config/config.ini",encoding='utf-8')#全部运行
+        self.conf.read(conf_url,encoding='utf-8')
         self.paramter = configparser.ConfigParser()
-        self.paramter.read(param_url,encoding='utf-8')#单个运行
-        # self.paramter.read("config/parameters.ini",encoding='utf-8')#全部运行
+        self.paramter.read(param_url,encoding='utf-8')
+        # log_path = self.paramter.get("log", "log_path")
+        # log_path = r"F:\\script\\UC_1.0_Android\\UC_Android\\log\\"
+        # log_time_name = time.strftime("%Y-%m-%d %H-%M-%S", time.localtime())
+        # logging.basicConfig(format="[%(asctime)s]:%(filename)s,%(levelname)s,%(message)s",
+        #             filename=os.path.join(log_path, log_time_name+'_log.txt'), level=logging.INFO)
     def startUpApp(self):
+        self.restart_adb()
         desired_cups = {}
         # 设备平台 case_dir = conf.get("测试用例路径", "用例路径")
         desired_cups['platformName'] = self.conf.get("Appium", "platformName")
@@ -113,8 +116,8 @@ class commonCase(unittest.TestCase):
         print('hang up')
         debug_id_pre = self.debug_id_pre
         # com.yealink.uc.android.alpha:id/left_btn
-        time.sleep(5)
-        driver.find_element_by_id(debug_id_pre+'name').click()#通话界面图标
+        time.sleep(10)
+        driver.find_element_by_id(debug_id_pre+'nameContainer').click()#通话界面图标
         time.sleep(1)
         clickRes = driver.find_element_by_id(debug_id_pre+'hangup').click()#挂断通话
     #@获取通话统计的分辨率及帧率
@@ -144,22 +147,32 @@ class commonCase(unittest.TestCase):
         if el in source:
             return True
         return False
-    def result_handler(self,result,error):
-        try:
-            assert result
-        except Exception:
-            # self.packup_log()
-            raise(error)
+    def result_handler(self,driver,result,error):
+
+        if not result:
+            print(error)
+            driver.quit()
+        # try:
+        #     assert result
+        # except Exception:
+        #     # self.packup_log()
+        #     # raise(error)
+        #     print('eror')
+        #     print(error)
+            # driver.quit()
     def get_conf(self,option,value):
         paramter = self.debug_id_pre+self.paramter.get(option,value)
         return paramter
     def restart_adb(self):
-        # kill_adb_cmd = 'adb kill-server'
-        kill_adb_cmd = 'taskkill /im adb.exe'
+        restart_adb_server_cmd = 'adb start-server'
+        kill_adb_cmd = 'taskkill /f /im adb.exe'
         # os.chdir(retval+module_dir)
         # time.sleep(10)
         if not (os.system(kill_adb_cmd)==0):
             os.system(kill_adb_cmd)#不成功就启动
+        os.system(kill_adb_cmd)
+        os.system(restart_adb_server_cmd)
+
         print('kill success')
         # os.system(start_adb_cmd)#成功就启动
     def packup_log(self):

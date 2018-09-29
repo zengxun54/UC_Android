@@ -24,23 +24,39 @@ def allcase():
             testcase.addTest(test_case)
     return testcase
     # print(testcase)
-# # def circleRun():
+def circleCase():
+    n=1
+    testcase = unittest.TestSuite()
+    case_dir=r'F:\script\UC_1.0_Android\UC_Android\Test_case\DialPlate'
+    discover=unittest.defaultTestLoader.discover(case_dir,pattern='callBackCase.py',top_level_dir=None)
+    # while n < 3:
+    #discover方法筛选出来的用例，循环添加到测试套件中
+    for test_suite in discover:
+        for test_case in test_suite:
+            #添加用例到testcase
+            while n < 3:
+                print(n)
+                testcase.addTest(test_case)
+                n += 1
+            # print(test_case)
+    return testcase
+    # print(testcase)
 def circleRun():
     n=0
     commonCls = commonClass.commonCase(commonClass.debug_id_pre)
-    while n<100:
+    while n<300:
         # commonCls.restart_adb()
         runner = unittest.TextTestRunner()
-        runner.run(allcase())
+        # runner.run(allcase())
         # report_path = r'E:\testresult.html'
         # fp = open(report_path,"wb")
         # runner = HTMLTestRunner.HTMLTestRunner(stream=fp,title="自动化测试unittest测试框架报告",description="用例执行情况：")
-        # runner.run(allcase())
+        runner.run(allcase())
         # fp.close()
         print(time.ctime())
         print(n)
         n+=1
-        time.sleep(30)
+        time.sleep(3)
 # def get_case_from_Excel():
 #     print('get_case_from_Excel')
 #     # test_case =
@@ -83,13 +99,19 @@ def get_case():
     runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title="自动化测试unittest测试框架报告", description="用例执行情况：")
     # runner = unittest.TextTestRunner()
     runner.run(suite)
+def test1():
+    print('1')
+def test2():
+    print('2')
 
 def packup_log():
     commonCls = commonClass.commonCase(commonClass.debug_id_pre)
     commonCls.packup_log()
 if __name__=="__main__":
     # packup_log()
-    # get_case()
+    # test1()
+    # test2()
+    get_case()
     circleRun()
     # get_case_from_Excel()
     # # runner = unittest.TextTestRunner()
