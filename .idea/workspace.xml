@@ -2,26 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a7fe29f-94d7-403f-a866-938d73a3f1db" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Log/2018-09-29 21-30-42.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Log/2018-09-30 09-55-12.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Log/2018-09-30 09-56-13.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Log/2018-09-30 09-57-07.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Log/2018-09-30 10-19-30.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Log/2018-09-30 10-33-43.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Log/2018-09-30 10-34-11.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Log/2018-09-30 10-35-42.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Log/2018-09-30 10-41-05.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Log/2018-09-30 10-41-23.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/testcase.xls" afterPath="$PROJECT_DIR$/config/testcase.xls" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Log/2018-09-29 21-30-42.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Log/2018-09-30 09-55-12.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Log/2018-09-30 09-56-13.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Log/2018-09-30 09-57-07.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Log/2018-09-30 10-19-30.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Log/2018-09-30 10-33-43.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Log/2018-09-30 10-34-11.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Log/2018-09-30 10-35-42.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Log/2018-09-30 10-41-05.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/commonClass.py" afterPath="$PROJECT_DIR$/Public/commonClass.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/publicMethod_tj.py" afterPath="$PROJECT_DIR$/Public/publicMethod_tj.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test_case/DialPlate/callBackCase.py" afterPath="$PROJECT_DIR$/Test_case/DialPlate/callBackCase.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test_case/Discussion/chatDiscussion.py" afterPath="$PROJECT_DIR$/Test_case/Discussion/chatDiscussion.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test_case/Discussion/createDiscussion.py" afterPath="$PROJECT_DIR$/Test_case/Discussion/createDiscussion.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test_case/group/casecreategroup.py" afterPath="$PROJECT_DIR$/Test_case/group/casecreategroup.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/ConnectMobile.py" afterPath="$PROJECT_DIR$/common/ConnectMobile.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run_test_case.py" afterPath="$PROJECT_DIR$/run_test_case.py" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -819,7 +809,13 @@
       <option name="project" value="LOCAL" />
       <updated>1538227799964</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="通跑调试">
+      <created>1538276066284</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1538276066284</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -874,7 +870,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="删除部分收起键盘步骤" />
     <MESSAGE value="xxx" />
-    <option name="LAST_COMMIT_MESSAGE" value="xxx" />
+    <MESSAGE value="通跑调试" />
+    <option name="LAST_COMMIT_MESSAGE" value="通跑调试" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
