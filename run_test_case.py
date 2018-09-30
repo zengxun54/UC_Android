@@ -42,9 +42,9 @@ def circleCase():
     return testcase
     # print(testcase)
 def circleRun():
-    n=0
+    n=1
     commonCls = commonClass.commonCase(commonClass.debug_id_pre)
-    while n<300:
+    while n<3:
         # commonCls.restart_adb()
         runner = unittest.TextTestRunner()
         # runner.run(allcase())
@@ -74,6 +74,7 @@ def circleRun():
 #     # for discover in discover_arr:
 #     #     runner.run(discover)
 def get_case():
+    print('开始测试')
     xlsfile = r"F:\script\UC_1.0_Android\UC_Android\config\testcase.xls"
     case_dir = "F:\\script\\UC_1.0_Android\\UC_Android\\Test_case"
     report_name = time.strftime("%Y-%m-%d %H-%M-%S", time.localtime())
@@ -84,7 +85,7 @@ def get_case():
     discover_arr=[]
     suite = unittest.TestSuite()
     runner = unittest.TextTestRunner()
-    # print(nrows)
+    print(nrows)
     for i in range(1, nrows):
         is_run = sheet0.cell_value(i, 3)
         # print(is_run)
@@ -95,10 +96,12 @@ def get_case():
     for test_suite in discover_arr:
         for test_case in test_suite:
             suite.addTest(test_case)
+    print(discover_arr)
     fp = open(report_path,"wb")
     runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title="自动化测试unittest测试框架报告", description="用例执行情况：")
     # runner = unittest.TextTestRunner()
     runner.run(suite)
+    print('结束测试')
 def test1():
     print('1')
 def test2():
@@ -112,7 +115,7 @@ if __name__=="__main__":
     # test1()
     # test2()
     get_case()
-    circleRun()
+    # circleRun()
     # get_case_from_Excel()
     # # runner = unittest.TextTestRunner()
     # # # runner.run(allcase())

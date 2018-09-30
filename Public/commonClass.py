@@ -6,6 +6,10 @@ import time,configparser
 import re
 import logging
 from subprocess import Popen
+from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.common.by import By
 debug_id_pre = 'com.yealink.uc.android.alpha:id/'
 # conf_url = "../../config/config.ini"#单个运行
 # param_url = "../../config/parameters.ini"#单个运行
@@ -171,6 +175,8 @@ class commonCase(unittest.TestCase):
         if not (os.system(kill_adb_cmd)==0):
             os.system(kill_adb_cmd)#不成功就启动
         os.system(kill_adb_cmd)
+        if not (os.system(restart_adb_server_cmd)==0):
+            os.system(kill_adb_cmd)#不成功就启动
         os.system(restart_adb_server_cmd)
 
         print('kill success')
@@ -181,3 +187,15 @@ class commonCase(unittest.TestCase):
         packup_file_path = self.conf.get("packup", "packup_file_path")
         p = Popen(packup_file_name, cwd=packup_file_path,shell=True)
         stdout, stderr = p.communicate()
+    def waitForID(self,driver, idstr, msg='666', timeout = 15):
+        return WebDriverWait(driver,timeout).until(lambda driver: driver.find_element_by_id(idstr).is_displayed(), msg)
+    def waitForXpath(self,driver, idstr, msg='666', timeout = 15):
+        return WebDriverWait(driver,timeout).until(lambda driver: driver.find_element_by_xpath(idstr).is_displayed(), msg)
+    def waitForElementByType(self,driver,type, str, msg='666', timeout = 15):
+        if type == 'id':
+            return WebDriverWait(driver,timeout).until(lambda driver: driver.find_element_by_id(str).is_displayed(), msg)
+        elif type == 'xpath':
+            return WebDriverWait(driver,timeout).until(lambda driver: driver.find_element_by_xpath(str).is_displayed(), msg)
+        elif type == 'classes':
+            return WebDriverWait(driver,timeout).until(lambda driver: driver.find_elements_by_class_name(str).is_displayed(), msg)
+
