@@ -36,7 +36,8 @@ class publicMethod(unittest.TestCase):
         #desired_cups['app'] = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '\\app\\' + 'Yealink_UC_Android_1.1.3.839-pre-debug.apk'
         desired_cups['app'] = r'F:\UME android apk\Yealink_UC_Android_1.1.18.1028-pre-debug.apk'
         desired_cups['appPackage'] = 'com.yealink.uc.android.alpha'
-        desired_cups['appActivity'] = 'com.yealink.uc.android.StartActivity'
+        # desired_cups['appActivity'] = 'com.yealink.uc.android.StartActivity'
+        desired_cups['appWaitActivity'] = 'com.yealink.uc.android.MainActivity'
         desired_cups['unicodeKeyboard'] = True
         desired_cups['resetKeyboard'] = True
         desired_cups['noReset'] = True

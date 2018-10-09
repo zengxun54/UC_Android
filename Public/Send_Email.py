@@ -13,23 +13,24 @@ def _format_addr(s):
     name, addr = parseaddr (s)
     return formataddr (( \
     Header (name, 'utf-8').encode (), \
-    addr.encode ('utf-8') if isinstance (addr, unicode) else addr))
+    addr.encode ('utf-8') if isinstance (addr, bytes) else addr))
 ## ==============定义发送附件邮件==========
 def send_file(file_new):
+        reportname = os.path.split(file_new)[1]
         smtpserver = 'mail.yealink.com'
-        user = 'yl1477'
-        password = 'Lbc6683918'
-        sender = 'liubc@yealink.com'
-        receiver = ['liubc@yealink.com']
-    # subject='**自动化测试报告'
-        file = open (file_new, 'r').read ()
+        user = 'yealink\yl1698'
+        password = 'qwer@0099'
+        sender = 'linmx@yealink.com'
+        receiver = ['linmx@yealink.com']
+        # subject='**自动化测试报告'
+        file = open (file_new, 'rb').read()#将r改为rb，解决发邮件报乱码问题
 
         now = time.strftime ("%Y-%m-%d %H_%M_%S")
-        subject = '自动化测试报告--' + now
+        subject = '移动端自动化测试报告--' + now
         # att=MIMEText(sendfile,"base64","utf-8")
         att = MIMEText (file, "html", "utf-8")
         att["Content-Type"] = "application/octet-stream"
-        att["ContenT-Disposition"] = "attachment;filename =移动端自动化测试报告.html"
+        att["ContenT-Disposition"] = "attachment;filename ="+reportname
 
         msgRoot = MIMEMultipart ('related')
         msgRoot['Subject'] = subject
@@ -42,8 +43,8 @@ def send_file(file_new):
         smtp.connect (smtpserver)
         smtp.starttls()
         smtp.login (user, password)
-        smtp.sendmail (sender, receiver, msgRoot.as_string ())
-        smtp.quit ()
+        smtp.sendmail(sender, receiver, msgRoot.as_string ())
+        smtp.quit()
 
 
 
@@ -56,5 +57,7 @@ def new_report(test_report):
     print(file_new)
     return file_new
 
-if __name__ == "__main__":
-    send_file( r'F:\testresult.html')
+# if __name__ == "__main__":
+#     # send_file(r'F:\script\UC_1.0_Android\UC_Android\Report\2018-09-30 15-14-39.html')
+#     send_file('F:\\2018-09-30 16-06-25.html')
+    # send_file(r'F:\script\UC_1.0_Android\UC_Android\Report\20180930151439.html')

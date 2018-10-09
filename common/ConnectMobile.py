@@ -60,6 +60,7 @@ def connectmobile():
         'noReset':'true',
         'appPackage': packageName,
         'appActivity': 'com.yealink.uc.android.StartActivity',
+        'appWaitActivity': 'com.yealink.uc.android.MainActivity',
         'automationName':'uiautomator2',
     }
 

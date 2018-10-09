@@ -34,13 +34,13 @@ class ConfigFactory(object):
     #     "noReset": "True",
     #     "app": r"F:\UME android apk\Yealink_UC_Android_1.1.16.1024-local-release.apk",
     # }
-    desired_cups={#小米4+lmx PC
+    desired_cups={#小米4+lmx PC+debug
         "platformName": "Android",
         "platformVersion": "7.0.0",
         "deviceName": "M960BDQD22BWB",
         "appWaitActivity": "com.yealink.uc.android.login.LoginActivity",
         "noReset": "True",
-        "app": r"F:\UME android apk\Yealink_UC_Android_1.1.17.1027-local-release.apk",
+        "app": r"F:\UME android apk\Yealink_UC_Android_1.1.18.1028-pre-debug.apk",
     }
     # ------------------------------------------------------------------------
     #用例数据

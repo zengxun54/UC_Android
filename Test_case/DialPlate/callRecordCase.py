@@ -8,6 +8,8 @@ from Public import commonClass
 import HTMLTestRunner
 import traceback
 import re
+from lib2to3.pgen2.driver import Driver
+from lib2to3.tests.support import driver
 calllog_all_count = None
 calllog_first_count = None
 class callRecordCase(unittest.TestCase):
@@ -30,10 +32,12 @@ class callRecordCase(unittest.TestCase):
         time.sleep(1)
         self.driver.find_element_by_xpath("//android.widget.TextView[@text='拨号']").click()
         time.sleep(1)
+        # self.driver.find_element_by_android_uiautomator("text(\"拨号\")").click()
         source = self.driver.page_source
         el = debug_id_pre+'iv_call_send'
         # 拨号界面如果有拨号键，再次点击拨号页签按钮
         if el in source:
+            # self.driver.find_element_by_android_uiautomator("text(\"拨号\")").click()
             iv_call_send = self.driver.find_elements_by_id(debug_id_pre+'tab_text')[2].click()
             time.sleep(1)
         time.sleep(3)

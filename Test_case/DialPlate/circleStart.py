@@ -9,7 +9,7 @@ import HTMLTestRunner
 import traceback
 
 class circleACase(unittest.TestCase):
-    @unittest.skip("demonstrating skipping")
+    # @unittest.skip("demonstrating skipping")
     @classmethod
     def setUpClass(self):
         print('setup')
@@ -19,15 +19,19 @@ class circleACase(unittest.TestCase):
         self.paramter = self.commonCls.paramter
         # 启动app时，需要一定时间进入引导页，所以必须设置等待时间，不然下面会一直报错定位不到元素
         # time.sleep(20)
-    @unittest.skip("demonstrating skipping")
+    # @unittest.skip("demonstrating skipping")
     @classmethod
     def tearDownClass(self):
+
         print('tearDown')
         # pass
     # @unittest.skip("demonstrating skipping")
     # @unittest.skip("demonstrating skipping")
-    # def test_4wait(self):
-    #     time.sleep(60)
+    def test_4wait(self):
+        print('circleStart')
+
+        self.driver.quit()
+        time.sleep(30)
 # if __name__ == '__main__':
 #     unittest.main(verbosity=2)
     # suite = unittest.TestSuite()

@@ -18,7 +18,7 @@ class Login (unittest.TestCase):
         pass
     def test_logout(self):
         conf = configparser.ConfigParser ()
-        conf.read ("config/parameters.ini", encoding='utf-8')
+        conf.read (commonClass.param_url, encoding='utf-8')
         # 点击左上角个人头像
         self.driver.find_element_by_id (conf.get('个人中心','个人头像')).click ()
         time.sleep (3)

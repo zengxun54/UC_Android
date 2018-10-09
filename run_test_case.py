@@ -4,6 +4,7 @@ import os,time,xdrlib
 import HTMLTestRunner
 import configparser,xlrd
 from Public import commonClass
+from Public import Send_Email
 #from Send_email import  main2
 # from Test_case.DialPlate import AudioCallCase
 # from Test_case.IMChat import IM_AudioCall
@@ -44,41 +45,49 @@ def circleCase():
 def circleRun():
     n=1
     commonCls = commonClass.commonCase(commonClass.debug_id_pre)
-    while n<3:
+    while n<80:
         # commonCls.restart_adb()
         runner = unittest.TextTestRunner()
-        # runner.run(allcase())
-        # report_path = r'E:\testresult.html'
-        # fp = open(report_path,"wb")
-        # runner = HTMLTestRunner.HTMLTestRunner(stream=fp,title="自动化测试unittest测试框架报告",description="用例执行情况：")
-        runner.run(allcase())
-        # fp.close()
+        runner.run(allcase())#通话记录回拨
+
         print(time.ctime())
         print(n)
         n+=1
         time.sleep(3)
-# def get_case_from_Excel():
-#     print('get_case_from_Excel')
-#     # test_case =
-#     runner = unittest.TextTestRunner()
-#     case_dir=r'F:\script\UC-1.0_android\DialPlate'
-#     case_dir2=r'F:\script\UC-1.0_android\DialPlate'
-#     discover=unittest.defaultTestLoader.discover(case_dir,pattern='VideoCallCase.py',top_level_dir=None)
-#     discover2=unittest.defaultTestLoader.discover(case_dir2,pattern='AudioCallCase.py',top_level_dir=None)
-#     discover_arr = [discover,discover2]
-#     # runner.run(unittest.suite.TestSuite tests=[unittest.suite.TestSuite tests=[circleStart.VideoCallCase testMethod=test_4wait]])
-#
-#     print(discover2)
-#     print(discover_arr)
-#     # runner = unittest.TextTestRunner()
-#     # for discover in discover_arr:
-#     #     runner.run(discover)
+def circleStart():
+    n=1
+    commonCls = commonClass.commonCase(commonClass.debug_id_pre)
+    while n<2000:
+        # commonCls.restart_adb()
+        runner = unittest.TextTestRunner()
+        runner.run(circleStartCase())#循环启停
+        print(time.ctime())
+        print(n)
+        n+=1
+        time.sleep(3)
+#待执行用例的目录
+def circleStartCase():
+    # conf = ConfigParser.SafeConfigParser ()
+    # conf.read ("config\\config.ini")
+    case_dir=r'F:\script\UC_1.0_Android\UC_Android\Test_case\DialPlate'
+    # case_path=os.path.join(os.getcwd(),"case")
+    testcase = unittest.TestSuite()
+    discover=unittest.defaultTestLoader.discover(case_dir,pattern='circleStart.py',top_level_dir=None)
+    # discover=unittest.defaultTestLoader.discover(case_dir,pattern='circleStart.py',top_level_dir=None)
+    #discover方法筛选出来的用例，循环添加到测试套件中
+    # print(discover)
+    for test_suite in discover:
+        for test_case in test_suite:
+            #添加用例到testcase
+            testcase.addTest(test_case)
+    return testcase
+    # print(testcase)
 def get_case():
     print('开始测试')
     xlsfile = r"F:\script\UC_1.0_Android\UC_Android\config\testcase.xls"
     case_dir = "F:\\script\\UC_1.0_Android\\UC_Android\\Test_case"
-    report_name = time.strftime("%Y-%m-%d %H-%M-%S", time.localtime())
-    report_path = "F:\\script\\UC_1.0_Android\\UC_Android\\log\\"+report_name+'.html'
+    report_name = time.strftime("%Y%m%d%H%M%S", time.localtime())
+    report_path = "F:\\script\\UC_1.0_Android\\UC_Android\\report\\"+report_name+'.html'
     book = xlrd.open_workbook(xlsfile)
     sheet0 = book.sheet_by_index(0)
     nrows = sheet0.nrows
@@ -101,6 +110,7 @@ def get_case():
     runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title="自动化测试unittest测试框架报告", description="用例执行情况：")
     # runner = unittest.TextTestRunner()
     runner.run(suite)
+    Send_Email.send_file(report_path)
     print('结束测试')
 def test1():
     print('1')
@@ -111,27 +121,7 @@ def packup_log():
     commonCls = commonClass.commonCase(commonClass.debug_id_pre)
     commonCls.packup_log()
 if __name__=="__main__":
-    # packup_log()
-    # test1()
-    # test2()
+    # circleStart()
+    # circleRun()
     get_case()
     # circleRun()
-    # get_case_from_Excel()
-    # # runner = unittest.TextTestRunner()
-    # # # runner.run(allcase())
-    # # report_path = r'E:\testresult.html'
-    # # fp = open(report_path,"wb")
-    # # runner = HTMLTestRunner.HTMLTestRunner(stream=fp,title="自动化测试unittest测试框架报告",description="用例执行情况：")
-    # # runner.run(allcase())
-    # # fp.close()
-    # circleRun()
-    # #main2()  #from send_email import main2  发送邮件！
-    ##################################################
-    # runner = unittest.TextTestRunner()
-    # # runner.run(allcase())
-    # report_path = r'E:\testresult.html'
-    # fp = open(report_path,"wb")
-    # runner = HTMLTestRunner.HTMLTestRunner(stream=fp,title="自动化测试unittest测试框架报告",description="用例执行情况：")
-    # runner.run(allcase())
-    # fp.close()
-    # print(time.ctime())

@@ -40,8 +40,10 @@ class commonCase(unittest.TestCase):
         desired_cups['deviceName'] = self.conf.get("Appium", "deviceName")
         # apk安装包路径
         PATH = lambda p: os.path.abspath(os.path.join (os.path.dirname (__file__), p))
-        desired_cups['app'] = PATH(self.conf.get("Appium", "appPackage"))
+        desired_cups['app'] = PATH(self.conf.get("Appium", "app"))
         desired_cups['appWaitActivity'] = self.conf.get("Appium", "appWaitActivity")
+        desired_cups['automationName'] = 'uiautomator2'
+        # desired_cups['automationName'] = PATH(self.conf.get("Appium", "appPackage"))
         desired_cups['noReset'] = True
         desired_cups['sessionOverride'] = True
         # 启动app
@@ -191,7 +193,7 @@ class commonCase(unittest.TestCase):
         return WebDriverWait(driver,timeout).until(lambda driver: driver.find_element_by_id(idstr).is_displayed(), msg)
     def waitForXpath(self,driver, idstr, msg='666', timeout = 15):
         return WebDriverWait(driver,timeout).until(lambda driver: driver.find_element_by_xpath(idstr).is_displayed(), msg)
-    def waitForElementByType(self,driver,type, str, msg='666', timeout = 15):
+    def waitForElementByType(self,driver,type, str, msg='dont find element after 15 seconds', timeout = 15):
         if type == 'id':
             return WebDriverWait(driver,timeout).until(lambda driver: driver.find_element_by_id(str).is_displayed(), msg)
         elif type == 'xpath':

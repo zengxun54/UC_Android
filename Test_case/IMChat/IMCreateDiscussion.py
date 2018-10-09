@@ -25,7 +25,8 @@ class CreateDiscussion (unittest.TestCase):
         abc='tj'
         print('click 1')
         # self.driver.find_element_by_id('action_search').click()  # 进入和某人的IM聊天界面
-        self.driver.find_element_by_name('林美霞').click()  # 进入和某人的IM聊天界面
+        username=conf.get ("单人聊天", "单人聊天用户")
+        self.driver.find_element_by_name(username).click()  # 进入和某人的IM聊天界面
         time.sleep(5)
         self.driver.find_element_by_id(conf.get ("单人聊天", "会话设置")).click()#点击右上角的会话设置图标
         time.sleep (3)
@@ -39,10 +40,10 @@ class CreateDiscussion (unittest.TestCase):
         time.sleep (5)
         # source = self.driver.page_source
         name1=self.driver.find_element_by_name(u'讨论组创建成功！').text
-        name2=self.driver.find_element_by_name(u'您邀请林美霞、汤葭加入本讨论组').text
+        name2=self.driver.find_element_by_name(u'您邀请'+username+'、汤葭加入本讨论组').text
         try:
             self.assertEqual (name1, u'讨论组创建成功！')
-            self.assertEqual (name2, u'您邀请林美霞、汤葭加入本讨论组')
+            self.assertEqual (name2, u'您邀请'+username+'、汤葭加入本讨论组')
         except Exception as msg:
             # print()
             raise("讨论组创建失败！")

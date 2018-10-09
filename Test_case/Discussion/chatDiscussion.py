@@ -18,7 +18,7 @@ class chatDiscussion(unittest.TestCase):
     def setUp(self):
         self.driver = publicMethod.open_app(self)
 
-    发送文本
+    # 发送文本
     def test_sendMsg(self):
         number = random.randint(0, 1000)
         createDiscussion.test_mainCreateDiscussion(self)
@@ -192,10 +192,7 @@ class chatDiscussion(unittest.TestCase):
         except AssertionError as e:
             AssertionError("@多人比对失败")
             raise
-    #
-    #
-    #
-    #
+
     #建立视频会议
     def test_videoTalk(self):
         createDiscussion.test_mainCreateDiscussion(self)

@@ -23,18 +23,22 @@ class callBackCase(unittest.TestCase):
     @classmethod
     def tearDownClass(self):
         print('tearDown')
+        self.driver.quit()
         #@通话记录回拨
     def test_1calllog_back(self):
         print('test_1calllog_back')
         xpathStr_bohao = "//android.widget.TextView[@text='拨号']"
         self.commonCls.waitForElementByType(self.driver,'xpath', xpathStr_bohao)#等待
         self.driver.find_element_by_xpath(xpathStr_bohao).click()
+        # self.driver.find_element_by_android_uiautomator("text(\"拨号\")").click()
+        print('xpathStr_bohao')
         time.sleep(2)
         source = self.driver.page_source
         el = (commonClass.debug_id_pre+'iv_call_send')
         # 拨号界面如果有拨号键，再次点击拨号页签按钮
         if el in source:
-            self.commonCls.waitForElementByType(self.driver,'xpath', xpathStr_bohao)#等待
+            # self.driver.find_element_by_android_uiautomator("text(\"拨号\")")
+            # self.commonCls.waitForElementByType(self.driver,'xpath', xpathStr_bohao)#等待
             self.driver.find_element_by_xpath(xpathStr_bohao).click()
         time.sleep(3)
         # source_record = self.driver.page_source
@@ -54,7 +58,8 @@ class callBackCase(unittest.TestCase):
 
         # time.sleep(5)
         idStr = commonClass.debug_id_pre+'nameContainer'
-        self.commonCls.waitForID(self.driver,idStr)
+        # self.commonCls.waitForID(self.driver,idStr)
+        self.commonCls.waitForElementByType(self.driver,'id', idStr)
         source_talk = self.driver.page_source
         el=(commonClass.debug_id_pre+'nameContainer')
         result = el in source_talk#传入正确
@@ -66,7 +71,7 @@ class callBackCase(unittest.TestCase):
     #############################################
     def test_2check_call_type(self):
         idStr_nameContainer = commonClass.debug_id_pre+'nameContainer'#等待
-        self.commonCls.waitForID(self.driver,idStr_nameContainer)
+        self.commonCls.waitForElementByType(self.driver,'id', idStr_nameContainer)
         print('test_2check_call_type')
         debug_id_pre = commonClass.debug_id_pre
         self.driver.find_element_by_id(idStr_nameContainer).click()#判断通话界面图标是否出现
@@ -97,5 +102,5 @@ class callBackCase(unittest.TestCase):
         source = self.driver.page_source
         result = nameContainer not in source
         self.commonCls.result_handler(self.driver,result,'通话界面未挂断')
-if __name__== '__main__':
-    unittest.main(verbosity=2)
+# if __name__== '__main__':
+#     unittest.main(verbosity=2)

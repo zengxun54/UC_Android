@@ -6,8 +6,8 @@ import os
 import configparser
 from appium import  webdriver
 from Public import commonClass
-class SendMsg (unittest.TestCase):
-    # @classmethod
+class SendMsg(unittest.TestCase):
+    @classmethod
     def setUpClass(self):
         print('SendMsg setup')
         # debug_id_pre = 'com.yealink.uc.android.alpha:id/'
@@ -15,7 +15,7 @@ class SendMsg (unittest.TestCase):
         self.driver = self.commonCls.startUpApp()
         self.paramter = self.commonCls.paramter
         # 启动app时，需要一定时间进入引导页，所以必须设置等待时间，不然下面会一直报错定位不到元素
-    # @classmethod
+    @classmethod
     def tearDownClass(self):
         pass
         # self.driver.find_element_by_id('com.yealink.uc.android.alpha:id/left_btn').click()#返回最近会话列表
