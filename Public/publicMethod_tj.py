@@ -5,7 +5,6 @@ import os, sys, time
 from appium import webdriver
 import unittest
 import random
-from Public import commonClass
 
 #debug包
 packageName = 'com.yealink.uc.android.alpha:id/'
@@ -14,27 +13,12 @@ class publicMethod(unittest.TestCase):
 
     #打开APP
     def open_app(self):
-        self.commonCls = commonClass.commonCase(packageName)
-        self.commonCls.restart_adb()
-        # desired_cups = {}
-        # desired_cups['platformName'] = 'Android'
-        # desired_cups['platformVersion'] = '8.0.0'
-        # desired_cups['deviceName'] = '6423b456'
-        # #desired_cups['app'] = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '\\app\\' + 'Yealink_UC_Android_1.1.3.839-pre-debug.apk'
-        # desired_cups['app'] = 'F:\Yealink_UC_Android_1.1.16.1024-pre-debug.apk'
-        # desired_cups['appPackage'] = 'com.yealink.uc.android.alpha'
-        # desired_cups['appActivity'] = 'com.yealink.uc.android.StartActivity'
-        # desired_cups['unicodeKeyboard'] = True
-        # desired_cups['resetKeyboard'] = True
-        # desired_cups['noReset'] = True
-        # desired_cups['automationName'] = 'uiautomator2'
-
         desired_cups = {}
         desired_cups['platformName'] = 'Android'
-        desired_cups['platformVersion'] = '6.0.1'
-        desired_cups['deviceName'] = '50e35a0'
+        desired_cups['platformVersion'] = '8.0.0'
+        desired_cups['deviceName'] = '6423b456'
         #desired_cups['app'] = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '\\app\\' + 'Yealink_UC_Android_1.1.3.839-pre-debug.apk'
-        desired_cups['app'] = r'F:\UME android apk\Yealink_UC_Android_1.1.18.1028-pre-debug.apk'
+        desired_cups['app'] = 'F:\Yealink_UC_Android_1.1.18.1028-pre-debug.apk'
         desired_cups['appPackage'] = 'com.yealink.uc.android.alpha'
         # desired_cups['appActivity'] = 'com.yealink.uc.android.StartActivity'
         desired_cups['appWaitActivity'] = 'com.yealink.uc.android.MainActivity'
@@ -42,6 +26,7 @@ class publicMethod(unittest.TestCase):
         desired_cups['resetKeyboard'] = True
         desired_cups['noReset'] = True
         desired_cups['automationName'] = 'uiautomator2'
+
 
         #判断是否连上，连不上则重新连10次
         for i in range(1, 10):
