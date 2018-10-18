@@ -6,7 +6,7 @@ import time,configparser
 import re
 import logging
 from subprocess import Popen
-from selenium import webdriver
+from appium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.common.by import By
@@ -41,8 +41,10 @@ class commonCase(unittest.TestCase):
         # apk安装包路径
         PATH = lambda p: os.path.abspath(os.path.join (os.path.dirname (__file__), p))
         desired_cups['app'] = PATH(self.conf.get("Appium", "app"))
+        # desired_cups['appActivity'] = self.conf.get("Appium", "appActivity")
         desired_cups['appWaitActivity'] = self.conf.get("Appium", "appWaitActivity")
         desired_cups['automationName'] = 'uiautomator2'
+        desired_cups['newCommandTimeout'] = '300'
         # desired_cups['automationName'] = PATH(self.conf.get("Appium", "appPackage"))
         desired_cups['noReset'] = True
         desired_cups['sessionOverride'] = True
@@ -137,9 +139,10 @@ class commonCase(unittest.TestCase):
             return False
         return True
     def call_num(self,driver,call_num_str):
-        time.sleep(20)
+        time.sleep(15)
         print('call_num')
-        driver.find_element_by_name('拨号').click()
+        # driver.find_element_by_xpath("//android.widget.TextView[@text='拨号']").click()
+        driver.find_element_by_xpath("//android.widget.TextView[@text='拨号']").click()
         time.sleep(3)
         self.test_click_num(driver,call_num_str)
         time.sleep(1)
@@ -153,19 +156,30 @@ class commonCase(unittest.TestCase):
         if el in source:
             return True
         return False
-    def result_handler(self,driver,result,error):
-
-        if not result:
-            print(error)
-            driver.quit()
-        # try:
-        #     assert result
-        # except Exception:
-        #     # self.packup_log()
-        #     # raise(error)
-        #     print('eror')
-        #     print(error)
-            # driver.quit()
+    def result_handler(self,driver,type,ele,error):
+        try:
+            if type == 'exsit':#判断元素是否存在
+                self.assertIsNotNone(ele)
+            elif type == 'equal':
+                self.assertTrue(ele)
+        except Exception:
+                    # self.packup_log()
+                    # raise(error)
+                    print('eror')
+                    print(error)
+                    driver.quit()
+                    AssertionError(error)
+                # if not result:
+                #     print(error)
+                #     driver.quit()
+                # try:
+                #     assert result
+                # except Exception:
+                #     # self.packup_log()
+                #     # raise(error)
+                #     print('eror')
+                #     print(error)
+                    # driver.quit()
     def get_conf(self,option,value):
         paramter = self.debug_id_pre+self.paramter.get(option,value)
         return paramter
@@ -200,4 +214,22 @@ class commonCase(unittest.TestCase):
             return WebDriverWait(driver,timeout).until(lambda driver: driver.find_element_by_xpath(str).is_displayed(), msg)
         elif type == 'classes':
             return WebDriverWait(driver,timeout).until(lambda driver: driver.find_elements_by_class_name(str).is_displayed(), msg)
-
+    #获取单个元素，locateType值为xpath,或者id，loacteExpression为对应的id或者xpath
+    def getElement(self,driver,locateType,locateExpression):
+        try:
+            element = WebDriverWait(driver,10).until(lambda x:x.find_element(by=locateType,value=locateExpression))
+            return element
+        except Exception as e:
+            raise e
+    #获得机器屏幕大小x,y
+    def getSize(self,driver):
+        x = driver.get_window_size()['width']
+        y = driver.get_window_size()['height']
+        return (x, y)
+    #屏幕向上滑动
+    def swipeUp(self,driver,t):
+        l = self.getSize(driver)
+        x1 = int(l[0] * 0.5)  #x坐标
+        y1 = int(l[1] * 0.75)   #起始y坐标
+        y2 = int(l[1] * 0.25)   #终点y坐标
+        driver.swipe(x1, y1, x1, y2,t)
