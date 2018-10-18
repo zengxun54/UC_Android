@@ -116,6 +116,7 @@ class AudioCallCase(unittest.TestCase):
         self.commonCls = commonClass.commonCase(commonClass.debug_id_pre)
         self.commonCls.restart_adb()
         print('tearDown')
+        # self.driver.quit()
         #@通话记录回拨
     @unittest.skip("demonstrating skipping")
     def test_1call_num(self):#拨号用例

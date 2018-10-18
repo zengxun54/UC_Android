@@ -15,7 +15,7 @@ def allcase():
     case_dir=r'F:\script\UC_1.0_Android\UC_Android\Test_case\DialPlate'
     # case_path=os.path.join(os.getcwd(),"case")
     testcase = unittest.TestSuite()
-    discover=unittest.defaultTestLoader.discover(case_dir,pattern='callBackCase.py',top_level_dir=None)
+    discover=unittest.defaultTestLoader.discover(case_dir,pattern='VideoCallcase.py',top_level_dir=None)
     # discover=unittest.defaultTestLoader.discover(case_dir,pattern='circleStart.py',top_level_dir=None)
     #discover方法筛选出来的用例，循环添加到测试套件中
     # print(discover)
@@ -44,8 +44,7 @@ def circleCase():
     # print(testcase)
 def circleRun():
     n=1
-    commonCls = commonClass.commonCase(commonClass.debug_id_pre)
-    while n<80:
+    while n<180:
         # commonCls.restart_adb()
         runner = unittest.TextTestRunner()
         runner.run(allcase())#通话记录回拨
@@ -123,5 +122,9 @@ def packup_log():
 if __name__=="__main__":
     # circleStart()
     # circleRun()
-    get_case()
+    # get_case()
+    # get_case()
+    # get_case()
+    # get_case()
     # circleRun()
+    get_case()
