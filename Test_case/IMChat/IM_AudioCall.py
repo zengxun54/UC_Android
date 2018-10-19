@@ -23,7 +23,7 @@ class AudioCall (unittest.TestCase):
         # debug_id_pre = commonClass.debug_id_pre
     def test_1audiocall(self):
         print('test_audiocall')
-        time.sleep(5)
+        time.sleep(10)
         debug_id_pre = commonClass.debug_id_pre
         conf = configparser.ConfigParser()
         conf.read(commonClass.param_url, encoding='utf-8')
@@ -34,21 +34,14 @@ class AudioCall (unittest.TestCase):
         print('test username')
 
         self.driver.find_element_by_name(username).click()#进入和某人的IM聊天界面
-        time.sleep(5)
+        time.sleep(1)
         self.driver.find_element_by_id(conf.get ("单人聊天", "加号更多")).click()#点击加号图标
-        time.sleep(5)
+        time.sleep(1)
         self.driver.find_element_by_id (conf.get ("单人聊天", "音频通话")).click()#点击音频通话图标
         time.sleep(5)
-        source = self.driver.page_source
-        print (source)
-        el=debug_id_pre+'hangup'
-        # try:
-        #     assert el in source
-        # except Exception as msg:
-        #     print ('未进入通话界面！')
-        #     raise
-        result = el in source
-        self.commonCls.result_handler(self.driver,result,'通话界面未挂断！')
+        el_hangup=debug_id_pre+'hangup'
+        ele = self.driver.find_element_by_android_uiautomator('resourceId("'+el_hangup+'")')
+        self.commonCls.result_handler(self.driver,'exsit',ele,'未进入通话界面')
     def test_2call_statistics(self):
         print('test_call_statistics')
         debug_id_pre = commonClass.debug_id_pre
@@ -58,13 +51,25 @@ class AudioCall (unittest.TestCase):
         source = self.driver.page_source
         codec=self.driver.find_element_by_id(conf.get ("通话统计", "编解码格式")).text
         recv_protocol=self.driver.find_element_by_id(conf.get ("通话统计", "通话协议类型")).text
+        print(recv_protocol)
+        print(codec)
         try:
             self.assertEquals(recv_protocol,u'协议:SIP')
             self.assertEquals(codec,u'opus')
-
         except Exception as msg:
             print ('通话数据异常！')
             raise
+    def test_3hang_up(self):#挂断通话
+        debug_id_pre = commonClass.debug_id_pre
+        time.sleep(1)
+        self.driver.find_element_by_id(self.commonCls.get_conf("dialPlate","left_btn")).click()
+        time.sleep(1)
+        self.commonCls.hang_up(self.driver)
+        time.sleep(3)
+        ele_radio_more = debug_id_pre+'radio_more'
+        ele = self.driver.find_element_by_android_uiautomator('resourceId("'+ele_radio_more+'")')
+        self.commonCls.result_handler(self.driver,'exsit',ele,'通话界面未关闭')
+        self.driver.quit()
 # if __name__ == '__main__':
 #     unittest.main()
 
