@@ -60,13 +60,10 @@ class SendMsg(unittest.TestCase):
     def test_3status(self):
         print('test_status')
         time.sleep(5)
-        source = self.driver.page_source
+        # source = self.driver.page_source
         status=(commonClass.debug_id_pre+'record_status')
-        try:
-            assert status  not in source
-        except Exception as msg:
-            print('发送失败！')
-            raise('发送失败！')
+        # ele = self.driver.find_element_by_android_uiautomator('resourceId("'+status+'")')
+        self.commonCls.result_handler(self.driver,'notexsit',status,'发送失败！')
 # if __name__== '__main__':
 #     unittest.main ()
 
