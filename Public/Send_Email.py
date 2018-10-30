@@ -17,11 +17,11 @@ def _format_addr(s):
 ## ==============定义发送附件邮件==========
 def send_file(file_new):
         reportname = os.path.split(file_new)[1]
-        smtpserver = 'mail.yealink.com'
-        user = 'yealink\yl1698'
-        password = 'qwer@0099'
-        sender = 'linmx@yealink.com'
-        receiver = ['linmx@yealink.com']
+        smtpserver = '#'
+        user = '#'
+        password = '*'
+        sender = '*'
+        receiver = ['#']
         # subject='**自动化测试报告'
         file = open (file_new, 'rb').read()#将r改为rb，解决发邮件报乱码问题
 
